@@ -1,0 +1,125 @@
+.provision_guide {
+    width: 1000px;
+    margin: 70px auto;
+}
+
+.provision_guide h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.guide_wrap {
+    width: 1000px;
+    height: 939px;
+    background: #ededed;
+    padding-top: 70px;
+    box-sizing: border-box;
+}
+
+.guide_wrap h3 {
+    margin: 0 0 12px 30px;
+    color: #0080ff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.personal_user {
+    height: 224px;
+    margin-bottom: 70px;
+    width: 1000px;
+    box-sizing: border-box;
+    padding: 0 84px;
+    position: relative;
+}
+
+.company_user {
+    height: 224px;
+    width: 1000px;
+    box-sizing: border-box;
+    padding: 0 84px;
+    margin-bottom: 87px;
+    position: relative;
+}
+
+.personal_user li {
+    float: left;
+    width: 224px;
+    height: 224px;
+    box-sizing: border-box;
+    background: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 224px;
+    font-size: 36px;
+}
+
+.company_user li {
+    float: left;
+    width: 224px;
+    height: 224px;
+    box-sizing: border-box;
+    background: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 224px;
+    font-size: 36px;
+}
+
+.personal_user1 {
+    margin-right: 80px;
+}
+
+.personal_user2 {
+    margin-right: 80px;
+}
+
+.company_user1 {
+    margin-right: 80px;
+}
+
+.company_user2 {
+    margin-right: 80px;
+}
+
+.guide_txt {
+    margin-left: 30px;
+}
+
+.guide_txt p {
+    margin-bottom: 40px;
+    font-size: 24px;
+    color: #949494
+}
+
+.guide_next1 {
+    position: absolute;
+    width: 36px;
+    height: 72px;
+    top: 76px;
+    left: 330px;
+}
+
+.guide_next2 {
+    position: absolute;
+    width: 36px;
+    height: 72px;
+    top: 76px;
+    left: 634px;
+}
+
+.guide_next3 {
+    position: absolute;
+    width: 36px;
+    height: 72px;
+    top: 76px;
+    left: 330px;
+}
+
+.guide_next4 {
+    position: absolute;
+    width: 36px;
+    height: 72px;
+    top: 76px;
+    left: 634px;
+}

@@ -1,0 +1,74 @@
+.ad {
+    width: 1000px;
+    height: 700px;
+    margin: 0 auto 50px;
+    position: relative;
+    overflow:hidden;
+    line-height: 18px;
+    font-family: "roboto", "noto sans kr", "applesdgothicneo";
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+.basic_ad{position: relative;width: 1000px;margin:auto}
+.basic_ad h2 {
+    font-size: 20px;
+    font-weight: bold;
+    width: 1000px;
+    margin:auto;
+    margin-bottom: 10px;
+    line-height: 24px;
+}
+/* 일반 광고 박스 */
+.ad dl {
+    width: 235px;
+    height: 120px;
+    box-sizing: border-box;
+    border-top: 4px solid #4da4fc;
+    border-left: 1px solid #4da4fc;
+    border-right: 1px solid #4da4fc;
+    border-bottom: 1px solid #4da4fc;
+    position: relative;
+    float: left;
+    margin-bottom:20px;
+}
+/* 일반 광고 서브 박스 */
+.ad div {
+    width: 152px;
+    height: 115px;
+    border-left:1px solid #cdf;
+    box-sizing: border-box;
+    float: right;
+}
+/* 일반 광고 스크립트 */
+.ad div dt,
+.ad div dd {
+    margin-left: 10px;
+}
+/* 회사이름 */
+.ad div dt {
+    font-size: 10px;
+    color: #949494;
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+/* 일반 광고 스크립트 */
+.ad div dd {
+    font-size: 14px;
+}
+/* 디데이 */
+.ad div dd:last-child {
+    position: absolute;
+    bottom: 10px;
+    color: #0080ff;
+    font-size: 10px;
+}
+/* 펼치기 감추기 */
+.ad_more {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    color: #646464;
+    cursor: pointer;
+}

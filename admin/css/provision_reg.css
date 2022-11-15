@@ -1,0 +1,51 @@
+.provision_reg {
+    width: 1000px;
+    margin: auto;
+}
+
+.provision_reg h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.reg_wrap {
+    width: 1000px;
+    height: 881px;
+    background: #ededed;
+    border-top: 1px solid #ededed;
+    box-sizing: border-box;
+    margin-bottom: 160px;
+    position: relative;
+}
+
+.reg_wrap dl {
+    width: 860px;
+    height: 30px;
+    margin: 40px auto;
+}
+
+.reg_wrap dl>dt {
+    float: left;
+    font-size: 18px;
+    line-height: 36px;
+}
+
+.reg_wrap dl>dd>input {
+    float: right;
+    width: 700px;
+    height: 30px;
+}
+
+.reg_btn {
+    position: absolute;
+    right: 0px;
+    bottom: -90px;
+    width: 150px;
+    height: 60px;
+    border: none;
+    background: #0080ff;
+    color: white;
+    font-size: 24px;
+    border-radius: 30px
+}

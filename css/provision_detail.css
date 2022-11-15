@@ -1,0 +1,54 @@
+/* company_detail */
+
+.company_detail {
+    width: 618px;
+    height: 1441px;
+    border-top: 2px solid #949494;
+    border-right: 2px solid #949494;
+    border-bottom: 2px solid #949494;
+    box-sizing: border-box;
+    float: left;
+    padding: 30px;
+}
+
+.company_detail h2 {
+    font-size: 18px;
+    color: #0080ff;
+    margin-bottom: 65px;
+}
+
+.sub_title {
+    float: left;
+    color: #949494;
+    font-size: 15px;
+    line-height: 20px;
+    width: 81px;
+}
+
+.detail {
+    float: left;
+    font-size: 18px;
+    width: 408px;
+    margin-left: 71px
+}
+
+.company_detail dl {
+    width: 560px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.company_detail h3 {
+    font-size: 15px;
+    color: #949494;
+    margin-bottom: 30px;
+}
+
+.ps {
+    width: 550px;
+    height: 500px;
+    background: #ededed;
+    text-indent: -9999px;
+    margin: auto;
+}

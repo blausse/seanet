@@ -1,0 +1,194 @@
+#main_bg {
+    position: relative;
+}
+
+.main_bg_cont {
+    margin-top: 10px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.customer_center {
+    color: white;
+    display: block;
+    width: 1000px;
+    /* height: 300px; */
+    text-align: center;
+    margin: auto;
+    font-family: "roboto", "noto sans kr";
+}
+
+.customer_center legend {
+    line-height: 100px;
+    font-size: 36px;
+}
+
+.customer_center label {
+    font-size: 24px;
+    color: white;
+}
+
+.customer_center input[type=text] {
+    height: 40px;
+    width: 500px;
+    border-radius: 30px;
+    border: none;
+    margin-top: 47px;
+    box-shadow: 0 2px 3px 0 rgb(0 0 0 / 10%);
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+.ref_search {
+    border-top: 1px solid white;
+    margin: 40px auto 20px;
+    width: 800px;
+    display: flex;
+}
+
+.ref_search h2 {
+    width: 100px;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+.ref_search_list {
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ref_search_list button {
+    width: auto;
+    padding: 0 10px;
+    height: 30px;
+    border: none;
+    background: #0080ff;
+    color: white;
+    border-radius: 15px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.notice {
+    margin: auto;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.notice_list button,
+.notice_list div {
+    display: inline-block;
+}
+
+.notice_list button {
+    width: auto;
+    padding: 0 10px;
+    height: 20px;
+    border: none;
+    background: #0080ff;
+    color: white;
+    border-radius: 15px;
+    font-size: 14px;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+.a {
+    background-color: #ededed;
+    height: 1px;
+    border: 0;
+    margin-bottom: 20px;
+}
+
+.main_qna {
+    width: 1000px;
+    margin: auto;
+}
+
+.main_qna h2 {
+    margin-bottom: 20px;
+}
+
+.qna_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#qna_list_total {
+    width: auto;
+    padding: 0 10px;
+    height: 30px;
+    border: none;
+    background: #0080ff;
+    color: white;
+    border-radius: 20px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.qna_list button {
+    width: auto;
+    padding: 0 10px;
+    height: 30px;
+    border: none;
+    background: #ededed;
+    color: #222;
+    border-radius: 20px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.qna_card {
+    width: 1000px;
+    height: 280px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.qna_card button {
+    width: 230px;
+    height: 120px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.qna_card li div:last-child {
+    padding: 5px;
+    background: #9ecfff;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px 0 rgb(0 0 0 / 10%);
+}
+
+.qna_card li div:first-child {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: left;
+}
+
+.qna_more {
+    display: block;
+    width: 200px;
+    height: 45px;
+    font-size: 16px;
+    margin: 20px auto;
+    border-radius: 20px;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    color: #666
+}

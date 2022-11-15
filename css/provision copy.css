@@ -1,0 +1,155 @@
+.provision_bg {
+    height: 440px;
+    /* background: rgba(77, 164, 252, 0.1); */
+    width: 1200px;
+    margin: auto;
+    background: white;
+    position: relative;
+    top: 70px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border-top: 1px solid #cdf;
+    border-bottom: 1px solid #cdf;
+    margin-bottom: 140px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.provision_txt {
+    width: 169px;
+    height: 80px;
+    margin: 30px auto 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+}
+
+.location {
+    position: relative;
+    width: 183px;
+    height: 40px;
+}
+
+.location_box {
+    width: 183px;
+    height: 30px;
+    font-size: 15px;
+    line-height: 30px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    border: 1px solid #0080ff;
+}
+
+.product {
+    position: relative;
+    width: 183px;
+    height: 40px;
+}
+
+.product_box {
+    width: 183px;
+    height: 30px;
+    font-size: 15px;
+    line-height: 30px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    border: 1px solid #0080ff;
+}
+
+
+
+.provision_wrap {
+    margin: auto;
+    width: 1000px;
+}
+
+.provision_search {
+    position: relative;
+}
+
+.search_box {
+    width: 500px;
+    font-size: 14px;
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid #0080ff;
+    box-sizing: border-box;
+    padding-left: 40px;
+    z-index: 9
+}
+
+.provision_glass {
+    width: 18px;
+    height: 18px;
+    z-index: 10;
+    position: absolute;
+    left: 420px;
+    top: 6px;
+}
+
+.txt_wrap {
+    width: 1000px;
+    height: 30px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+.provision_search_btn {
+    width: 70px;
+    height: 30px;
+    color: white;
+    background: #0080ff;
+    border: none;
+    cursor: pointer
+}
+
+
+.bg_icon figcaption {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 15px;
+    color: #949494
+}
+
+.bg_icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bg_icon li {
+    width: 216px;
+    height: 216px;
+    background: #ffffff;
+    border-radius: 50%;
+    border: 1px solid #c9c9c9;
+    box-sizing: border-box;
+}
+
+.fig1 {
+    width: 93px;
+    margin: 40px auto;
+}
+
+.fig2 {
+    width: 135px;
+    margin: 40px auto;
+}
+
+.fig3 {
+    width: 96px;
+    margin: 40px auto;
+}
+
+
+.fig4 {
+    width: 110px;
+    margin: 40px auto;
+}
+
+.figcap3 {
+    margin-top: 15px
+}

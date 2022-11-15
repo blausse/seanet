@@ -1,0 +1,150 @@
+.board_glass {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    z-index: 10;
+}
+
+#board_search {
+    width: 800px;
+    height: 58px;
+    border-radius: 50px;
+    border: 1px solid #0080ff;
+    box-sizing: border-box;
+    font-size: 20px;
+    padding-left: 58px;
+    z-index: 9;
+}
+
+.board_search_wrap {
+    position: relative;
+    margin: 50px auto 30px;
+}
+
+#board_wrap {
+    width: 800px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#best_topic {
+    width: 800px;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.list_border {
+    width: 800px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.list_border dl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 800px;
+}
+
+.list_border dt {
+    height: 14px;
+    box-sizing: border-box;
+    line-height: 14px;
+    border: 1px solid #949494;
+    border-radius: 5px;
+    font-size: 10px;
+    text-align: center;
+    color: #949494;
+    padding: 0 5px;
+}
+
+.list_border dl dd a {
+    display: block;
+    /* width: 450px; */
+    flex-grow: 6;
+    margin-left: 10px
+}
+
+.topic {
+    width: 380px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.topic dl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 380px;
+}
+
+.topic dl dt a {
+    display: block;
+    flex-grow: 6;
+}
+
+.good {
+    flex-grow: 1;
+    text-align: right;
+    margin-right: 10px
+}
+
+.view {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.best_topic_title {
+    width: 800px;
+    font-size: 18px;
+    line-height: 40px;
+    border-bottom: 2px solid #e0e0e0;
+    font-weight: bold;
+}
+
+main h2 {
+    width: 380px;
+    font-size: 18px;
+    line-height: 40px;
+    border-bottom: 2px solid #e0e0e0;
+    font-weight: bold;
+}
+
+main>div {
+    position: relative;
+    width: 800px;
+    margin: auto;
+}
+
+main>div:not(:first-child) {
+    position: relative;
+    width: 380px;
+    margin: auto;
+}
+
+.voice_more {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.board_wrap>div:not(:first-child) {
+    width: 380px;
+    position: relative;
+}

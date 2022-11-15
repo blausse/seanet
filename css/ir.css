@@ -1,0 +1,138 @@
+.header_logo {
+    display: block;
+    width: 218px;
+    height: 58px;
+    background: url(../images/seanet.png)no-repeat;
+    text-indent: -9999px;
+}
+
+.gnb_logo {
+    width: 21px;
+    height: 24px;
+}
+
+.footer_logo {
+    width: 218px;
+    height: 58px;
+    background: url(../images/seanet.png)no-repeat;
+    text-indent: -9999px;
+}
+
+.company_list article {
+    width: 380px;
+    height: 120px;
+}
+
+/* vip광고 */
+.vip_ad1 {
+    background: url(../images/hmm.png)no-repeat;
+}
+
+.vip_ad2 {
+    background: url(../images/skshipping.png)no-repeat;
+}
+
+.vip_ad3 {
+    background: url(../images/kmtc1.png)no-repeat;
+}
+
+.vip_ad4 {
+    background: url(../images/wil.png)no-repeat;
+}
+
+.vip_ad5 {
+    background: url(../images/hlng.png)no-repeat;
+}
+
+.vip_ad6 {
+    background: url(../images/sm.png)no-repeat;
+}
+
+.vip_ad7 {
+    background: url(../images/hline.png)no-repeat;
+}
+
+.vip_ad8 {
+    background: url(../images/panocean.png)no-repeat;
+}
+
+/* 일반 광고 */
+.ad1 {
+    background: url(../images/wartsila.png)no-repeat;
+}
+
+.ad2 {
+    background: url(../images/syncro.png)no-repeat;
+}
+
+.ad3 {
+    background: url(../images/triadm.png)no-repeat;
+}
+
+.ad4 {
+    background: url(../images/ktm.png)no-repeat;
+}
+
+.ad5 {
+    background: url(../images/marineelec.png)no-repeat;
+}
+
+.ad6 {
+    background: url(../images/tj.png)no-repeat;
+}
+
+.ad7 {
+    background: url(../images/hanil.png)no-repeat;
+}
+
+.ad8 {
+    background: url(../images/dongjin.png)no-repeat;
+}
+
+.ad9 {
+    background: url(../images/kmtc2.png)no-repeat;
+}
+
+.ad21 {
+    background: url(../images/cido.png)no-repeat;
+}
+
+.ad11 {
+    background: url(../images/total.png)no-repeat;
+}
+
+.ad12 {
+    background: url(../images/kss.png)no-repeat;
+}
+
+.ad13 {
+    background: url(../images/namhae.png)no-repeat;
+}
+
+.ad14 {
+    background: url(../images/panstar.png)no-repeat;
+}
+
+.ad15 {
+    background: url(../images/polaris.png)no-repeat;
+}
+
+.ad16 {
+    background: url(../images/soil.png)no-repeat;
+}
+
+.ad17 {
+    background: url(../images/glovis.png)no-repeat;
+}
+
+.ad22 {
+    background: url(../images/dl.png)no-repeat;
+}
+
+.ad23 {
+    background: url(../images/orange.png)no-repeat;
+}
+
+.ad20 {
+    background: url(../images/rn.png)no-repeat;
+}

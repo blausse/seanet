@@ -1,0 +1,50 @@
+/* provision_check */
+.provision_check {
+    width: 800px;
+    height: 200px;
+    margin: auto;
+    position: relative;
+    padding-top: 30px;
+}
+
+.provision_check legend {
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.provision_check fieldset {
+    position: relative;
+}
+
+#code_sel {
+    margin-right: 20px;
+}
+
+.form-group {
+    display: inline-block
+}
+
+#t_invoice {
+    width: 470px;
+    font-size: 14px;
+    height: 30px;
+    border-radius: 20px;
+    border: 1px solid #0080ff;
+    box-sizing: border-box;
+    padding-left: 20px;
+    margin-left: 20px;
+}
+
+.check_btn {
+    width: 100px;
+    height: 30px;
+    border: none;
+    background: #0080ff;
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}

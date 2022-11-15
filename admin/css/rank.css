@@ -1,0 +1,120 @@
+.rank {
+    float: right;
+    width: 285px;
+    height: 458px;
+    position: relative;
+}
+
+.rank h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px
+}
+
+.popular_rank {
+    width: 285px;
+    height: 382px;
+    background: #ededed;
+    padding: 16px 0 0 40px;
+    box-sizing: border-box;
+    font-size: 15px;
+    line-height: 35px;
+    position: relative;
+}
+
+.rank_more {
+    position: absolute;
+    right: 0;
+    top: 8px;
+    color: #646464
+}
+
+.caret1 {
+    width: 14px;
+    height: 15px;
+    position: absolute;
+    top: 24px;
+    right: 18px;
+    fill: #949494
+}
+
+.caret2 {
+    width: 10px;
+    height: 15px;
+    position: absolute;
+    top: 59px;
+    right: 20px;
+    fill: #f75758
+}
+
+.caret3 {
+    width: 10px;
+    height: 15px;
+    position: absolute;
+    right: 20px;
+    top: 94px;
+    fill: #38acc9
+}
+
+.caret4 {
+    width: 10px;
+    height: 15px;
+    position: absolute;
+    right: 20px;
+    top: 129px;
+    fill: #f75758
+}
+
+.caret5 {
+    width: 10px;
+    height: 15px;
+    position: absolute;
+    right: 20px;
+    top: 164px;
+    fill: #38acc9
+}
+
+.caret6 {
+    width: 14px;
+    height: 15px;
+    right: 18px;
+    position: absolute;
+    top: 199px;
+    fill: #949494
+}
+
+.caret7 {
+    width: 10px;
+    height: 15px;
+    fill: #f75758;
+    position: absolute;
+    right: 20px;
+    top: 234px
+}
+
+.caret8 {
+    width: 10px;
+    right: 20px;
+    height: 15px;
+    position: absolute;
+    top: 269px;
+    fill: #38acc9
+}
+
+.caret9 {
+    width: 10px;
+    right: 20px;
+    height: 15px;
+    position: absolute;
+    top: 304px;
+    fill: #38acc9
+}
+
+.caret10 {
+    width: 10px;
+    right: 20px;
+    height: 15px;
+    position: absolute;
+    top: 339px;
+    fill: #38acc9
+}

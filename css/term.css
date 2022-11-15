@@ -1,0 +1,81 @@
+/* term */
+.red {
+    color: red
+}
+
+.blue {
+    color: blue
+}
+
+form {
+    margin-top: 70px;
+}
+
+.signup_box {
+    border: 1px solid #c9c9c9;
+    height: auto;
+    width: 400px;
+    margin: 0 auto 160px;
+    position: relative;
+    font-family: "roboto", "noto sans kr";
+}
+
+#sub_btn {
+    width: 150px;
+    height: 60px;
+    border: none;
+    background: #0080ff;
+    border-radius: 30px;
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: -90px;
+    cursor: pointer;
+}
+
+#checkwrap {
+    width: 460px;
+    height: 600px;
+    margin: 60px auto;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#checkwrap input[type=checkbox] {
+    margin-right: 10px;
+}
+
+.serv_term {
+    width: 350px;
+    height: 150px;
+    overflow: auto;
+    padding: 7px;
+    margin: 5px auto;
+    font-size: 14px;
+    box-sizing: border-box;
+    border: 1px solid #c9c9c9;
+    color: #949494
+}
+
+.signup_title {
+    font-size: 18px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-weight: bold;
+}
+
+label {
+    margin: 10px 0px;
+}
+
+#sub_btn {
+    cursor: pointer
+}
+
+input[type=checkbox] {
+    margin-left: 20px;
+}

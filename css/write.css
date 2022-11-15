@@ -1,0 +1,118 @@
+/* user info*/
+
+
+.u_info1 {
+    width: 400px;
+    margin: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.u_info1 p {
+    margin: 0 auto 10px;
+}
+
+.address {
+    width: 350px;
+    margin: auto;
+}
+
+.address button {
+    width: 80px;
+    height: 30px;
+    background: #0080ff;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    line-height: 30px
+}
+
+.u_info1 label {
+    line-height: 30px;
+}
+
+#u_id {
+    width: 250px;
+}
+
+
+input[type=text]:focus {
+    border: 1px solid #aad5ff;
+    background: #aad5ff;
+    color: black;
+}
+
+.signup_box input[type=text] {
+    border-radius: 15px;
+    border: none;
+    padding-left: 10px;
+    box-sizing: border-box;
+    background: #ededed;
+    width: 350px;
+    height: 30px;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+#sub {
+    width: 150px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    background: #0080ff;
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: -90px;
+}
+
+#sub_btn {
+    width: 150px;
+    height: 60px;
+    border: none;
+    background: #0080ff;
+    border-radius: 30px;
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: -90px;
+    cursor: pointer;
+}
+
+#private_signup {
+    margin-top: 30px;
+}
+
+.company_signup {
+    display: none;
+}
+
+form {
+    margin-top: 70px
+}
+
+.signup_box {
+    border: 1px solid #c9c9c9;
+    height: auto;
+    width: 700px;
+    margin: 0 auto 160px;
+    position: relative;
+    font-family: "roboto", "noto sans kr";
+}
+
+#prev_btn {
+    width: 150px;
+    height: 60px;
+    border: none;
+    background: #ededed;
+    border-radius: 30px;
+    font-size: 24px;
+    position: absolute;
+    left: 0;
+    bottom: -90px;
+    cursor: pointer;
+}

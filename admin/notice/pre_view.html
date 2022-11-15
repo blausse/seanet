@@ -1,0 +1,39 @@
+<!-- <?php
+include '../inc/dbcon.php';
+$n_idx = $_GET['n_idx'];
+$sql = "select*from notice where idx=$n_idx";
+$result = mysqli_query($dbcon,$sql);
+$array = mysqli_fetch_array($result);
+?> -->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .notice_list {
+            width: 400px;
+            /* 45px은 헤더 높이,95vh는 height 95% */
+            height: calc(95vh - 45px);
+            box-sizing: border-box
+        }
+    </style>
+</head>
+
+<body>
+    <div class="notice_list">
+        <div>
+            <p class="date">date</p>
+            <p class="title">title</p>
+            <p class="writer">writer</p>
+        </div>
+    </div>
+    <div class="notice_detail">
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+.glass {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    z-index: 10;
+}
+
+.header_search {
+    width: 600px;
+    height: 58px;
+    border-radius: 50px;
+    border: 1px solid #0080ff;
+    box-sizing: border-box;
+    font-size: 20px;
+    padding-left: 58px;
+    z-index: 9;
+}
+
+.header_search_wrap {
+    position: relative;
+}
