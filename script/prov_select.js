@@ -34,6 +34,7 @@
           }
         });
         if ($('.nice-select').length == 0) {
+
           $(document).off('.nice_select');
         }
       } else {
@@ -55,12 +56,14 @@
     });
 
     function create_nice_select($select) {
+
+
       $select.after($('<div></div>')
         .addClass('nice-select')
         .addClass($select.attr('class') || '')
         .addClass($select.attr('disabled') ? 'disabled' : '')
         .attr('tabindex', $select.attr('disabled') ? null : '0')
-        .html('<span class="current"></span><ul class="list"></ul>')
+        .html("<span class='current'></span><ul class='list'></ul>")
       );
 
       var $dropdown = $select.next();
@@ -100,8 +103,25 @@
         $dropdown.find('.option');
         $dropdown.find('.focus').removeClass('focus');
         $dropdown.find('.selected').addClass('focus');
+
       } else {
         $dropdown.focus();
+        //nice-select custom > hidden field value로 설정
+        $currentBox = $('.current').eq(0);
+        $currentBoxText = $currentBox.text();
+        if ($currentBoxText !== "지역 선택") {
+          $('.final_location_box').val($currentBoxText);
+        }
+        $currentDetail = $('.current').eq(1);
+        $currentDetailText = $currentDetail.text();
+        if ($currentDetailText !== "세부 지역") {
+          $('.final_location_detail').val($currentDetailText);
+        }
+        $currentProduct = $('.current').eq(2);
+        $currentProductText = $currentProduct.text();
+        if ($currentProductText !== "제품선택") {
+          $('.final_product').val($currentProductText);
+        }
       }
     });
 
@@ -114,6 +134,7 @@
 
     // Option click
     $(document).on('click.nice_select', '.nice-select .option:not(.disabled)', function (event) {
+
       var $option = $(this);
       var $dropdown = $option.closest('.nice-select');
 

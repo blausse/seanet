@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // selectbox styling
-    $('#location_box , #product_box, #code_sel,.ad_info_sel select').niceSelect();
+    $(' #p_email_sel, .location_box , #product_box, #code_sel,.ad_info_sel select,.location_detail').niceSelect();
 });
 $(document).ready(function () {
     //vip_more 클릭 시, 구인광고 펼치기 / 접기
