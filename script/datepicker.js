@@ -1,5 +1,5 @@
 $(document).ready(function () {
     $(function () {
-        $("#datepicker1,#datepicker2").datepicker();
+        $("#ai_startDate,#ai_endDate").datepicker();
     });
 })
