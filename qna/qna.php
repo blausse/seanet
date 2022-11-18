@@ -10,30 +10,30 @@ include "inc/session.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEANET</title>
-    <link rel="stylesheet" href="css/reset.css" type="text/css">
-    <link rel="stylesheet" href="css/ir.css" type="text/css">
-    <link rel="stylesheet" href="css/footer.css" type="text/css">
-    <link href="css/nice-select.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/vip_ad.css" type="text/css">
-    <link rel="stylesheet" href="./css/header.css" type="text/css">
-    <link rel="stylesheet" href="./css/gnb.css" type="text/css">
-    <link rel="stylesheet" href="./css/topmenu.css" type="text/css">
-    <link rel="stylesheet" href="./css/header_search.css" type="text/css">
-    <link rel="stylesheet" href="./css/popular_rank.css" type="text/css">
-    <link rel="stylesheet" href="./css/main_bg.css" type="text/css">
-    <link rel="stylesheet" href="./css/qna.css" type="text/css">
-    <script src="script/jquery.js"></script>
-    <script src="script/jquery.nice-select.js"></script>
-    <script src="script/script.js" type="text/javascript"></script>
-    <script src="script/gnb.js" type="text/javascript"></script>
-    <script src="script/popular_rank.js" type="text/javascript"></script>
-    <script src="script/top_menu.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../css/ir.css" type="text/css">
+    <link rel="stylesheet" href="../css/footer.css" type="text/css">
+    <link href="../css/nice-select.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/vip_ad.css" type="text/css">
+    <link rel="stylesheet" href="../css/header.css" type="text/css">
+    <link rel="stylesheet" href="../css/gnb.css" type="text/css">
+    <link rel="stylesheet" href="../css/topmenu.css" type="text/css">
+    <link rel="stylesheet" href="../css/header_search.css" type="text/css">
+    <link rel="stylesheet" href="../css/popular_rank.css" type="text/css">
+    <link rel="stylesheet" href="../css/main_bg.css" type="text/css">
+    <link rel="stylesheet" href="../css/qna.css" type="text/css">
+    <script src="../script/jquery.js"></script>
+    <script src="../script/jquery.nice-select.js"></script>
+    <script src="../script/script.js" type="text/javascript"></script>
+    <script src="../script/gnb.js" type="text/javascript"></script>
+    <script src="../script/popular_rank.js" type="text/javascript"></script>
+    <script src="../script/top_menu.js" type="text/javascript"></script>
     <script></script>
 </head>
 
 <body>
     <div class="wrap">
-        <?php include("./html_inc/header.inc"); ?>
+        <?php include("../html_inc/header.inc"); ?>
 
         <main>
             <div class="main_bg" id="main_bg">
@@ -58,36 +58,12 @@ include "inc/session.php";
             </div>
             <div class="notice">
                 <ul class="notice_list">
-                    <li><a><button>공지</button>
+                    <li>
+                        <a>
+                        <button>공지</button>
                             <div>title</div>
-                        </a></li>
-                    <!-- <li><a><button>공지</button>
-                            <div>title</div>
-                        </a></li>
-                    <li><a><button>공지</button>
-                            <div>title</div>
-                        </a></li>
-                    <li><a><button>공지</button>
-                            <div>title</div>
-                        </a></li>
-                    <li><a><button>공지</button>
-                            <div>title</div>
-                        </a></li>
-                    <li><a><button>공지</button>
-                            <div>title</div>
-                        </a></li>
-                    <li><a><button>공지</button>
-                            <div>title</div>
-                        </a></li>
-                    <li><a><button>공지</button>
-                            <div>title</div>
-                        </a></li>
-                    <li><a><button>공지</button>
-                            <div>title</div>
-                        </a></li>
-                    <li><a><button>공지</button>
-                            <div>title</div>
-                        </a></li> -->
+                        </a>
+                    </li>
                 </ul>
                 <p class="notice_more">공지 전체보기 ></p>
             </div><hr class="a">
@@ -143,7 +119,7 @@ include "inc/session.php";
                 <button class="qna_more">+ 도움말 더보기</button>
             </div>
         </main>
-        <?php include("./html_inc/footer.inc"); ?>
+        <?php include("../html_inc/footer.inc"); ?>
     </div>
 </body>
 </html>

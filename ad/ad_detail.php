@@ -20,8 +20,10 @@
     <script src="/web_project/script/jquery.nice-select.js"></script>
     <script src="/web_project/script/script.js" type="text/javascript"></script>
     <script src="/web_project/script/time_script.js" type="text/javascript"></script>
+    <script src="/web_project/script/gnb.js" type="text/javascript"></script>
+    <script src="/web_project/script/top_menu.js" type="text/javascript"></script>
+    <script src="/web_project/script/popular_rank.js" type="text/javascript"></script>
 </head>
-
 <body>
     <div class="wrap">
     <?php include("../html_inc/header.inc"); ?>

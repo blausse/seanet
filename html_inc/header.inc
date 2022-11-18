@@ -40,9 +40,9 @@
                 <ul class="gnb">
                     <li class="gnb1"><a href="/web_project/ad/ad_basic.php">구인광고
                             <ul>
-                                <li><a href="/web_project/ad/ad_basic.php">구인광고 검색</a></li>
-                                <li><a href="/web_project/ad/ad_reg.php">구인광고 등록</a></li>
-                                <li><a href="/web_project/ad/ad_detail.php">구인광고 상세</a></li>
+                                <li><a href="/web_project/ad/basic.php">구인광고 검색</a></li>
+                                <li><a href="/web_project/ad/write.php">구인광고 등록</a></li>
+                                <li><a href="/web_project/ad/list.php">구인광고 상세</a></li>
                             </ul>
                         </a></li>
                     <li class="gnb2"><a href="#">Seaman's Voice
@@ -52,15 +52,15 @@
                                 <li><a href="#">실시간 Voice</a></li>
                             </ul>
                         </a></li>
-                    <li class="gnb3"><a href="#">선식, 선용품
+                    <li class="gnb3"><a href="/web_project/provision/list.php">선식, 선용품
                             <ul>
-                                <li><a href="#">업체조회</a></li>
+                                <li><a href="/web_procject/provision/list.php">업체조회</a></li>
                                 <li><a href="#">배송조회</a></li>
-                                <li><a href="#">업체등록</a></li>
-                                <li><a href="#">이용안내</a></li>
+                                <li><a href="/web_project/provision/reg.php">업체등록</a></li>
+                                <li><a href="/web_project/provision/guide.php">이용안내</a></li>
                             </ul>
                         </a></li>
-                    <li class="gnb4"><a href="/web_project/qna.php">문의</a>
+                    <li class="gnb4"><a href="/web_project/qna/qna.php">문의</a>
                     </li>
                 </ul>
                 <div class="gnb_bg"></div>

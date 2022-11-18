@@ -37,8 +37,7 @@ body {
     /* 45px은 헤더 높이,95vh는 height 95% */
     height: calc(95vh - 200px);
     border-left: 1px solid #e0e0e0;
-    /* overflow-y: scroll;
-    overflow-x: hidden; */
+    overflow: scroll;
     box-sizing: border-box;
 }
 
@@ -190,12 +189,35 @@ body {
 
 .detail_content {
     padding-left: 30px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.5;
     display: flex;
     flex-direction: column;
 }
 
 .detail_content p {
-    line-height: 50px;
+    margin: 10px 0;
 }
+
+.detail_content span {
+    display: inline-block;
+    width: 150px;
+    color: #a7a7a7;
+}
+
+
+.detail_content .note {
+    display: inline-block;
+    width: 100%;
+    height: 400px;
+    background: #ededed;
+    position: relative;
+    box-sizing: border-box;
+    padding: 30px;
+    margin: 10px 30px 0 0;
+}
+
+/* 
+.note_text {
+    margin: 30px;
+} */

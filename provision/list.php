@@ -94,19 +94,19 @@ function notice_del(p_idx) {
 </script>
 
 <style>
-    .modify{border:none;background:#0080ff;color:white;padding: 5px 10px;border-radius:15px;margin-right:10px;cursor:pointer}
-    .delete{border:none;background:#0080ff;color:white;padding: 5px 10px;border-radius:15px;cursor:pointer}
-    .first_slogan{font-family:"bm dohyeon";font-size:30px;width: 750px;line-height: calc(95vh - 200px);text-align:center;color:#0080ff}
-    .search_box{height:30px;border:1px solid #0080ff;border-radius:20px;background: #fff;padding-left:30px;width: 350px;;box-sizing:border-box;margin-right:10px;}
-    .provision_glass{width: 16px;height: 16px;position: absolute;left: 10px;top: 7px;}
-    .provision_search_btn{height: 30px;width: 50px;border:none;box-sizing:border-box;background: #0080ff;color:white}
-    .txt_wrap{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;width: 450px;box-sizing:border-box;border-bottom: 1px solid #e0e0e0;padding: 10px 20px;}
-    .location{margin:0 10px 10px 0;display:flex;justify-content:space-between;width: 270px;}
-    .product{margin-bottom:10px;}
-    .search_wrap{position: relative;}
-    .modify{border:none;background:#0080ff;color:white;padding: 5px 10px;border-radius:15px;margin-right:10px;cursor:pointer}
-    .delete{border:none;background:#0080ff;color:white;padding: 5px 10px;border-radius:15px;cursor:pointer}
-    .first_slogan{font-family:"bm dohyeon";font-size:30px;width: 750px;line-height: calc(95vh - 200px);text-align:center;color:#0080ff}
+.modify{border:none;background:#0080ff;color:white;padding: 5px 10px;border-radius:15px;margin-right:10px;cursor:pointer}
+.delete{border:none;background:#0080ff;color:white;padding: 5px 10px;border-radius:15px;cursor:pointer}
+.first_slogan{font-family:"bm dohyeon";font-size:30px;width: 750px;line-height: calc(95vh - 200px);text-align:center;color:#0080ff}
+.search_box{height:30px;border:1px solid #0080ff;border-radius:20px;background: #fff;padding-left:30px;width: 350px;;box-sizing:border-box;margin-right:10px;}
+.provision_glass{width: 16px;height: 16px;position: absolute;left: 10px;top: 7px;}
+.provision_search_btn{height: 30px;width: 50px;border:none;box-sizing:border-box;background: #0080ff;color:white}
+.txt_wrap{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:flex-start;width: 450px;box-sizing:border-box;border-bottom: 1px solid #e0e0e0;padding: 10px 20px;}
+.location{margin:0 10px 10px 0;display:flex;justify-content:space-between;width: 270px;}
+.product{margin-bottom:10px;}
+.search_wrap{position: relative;}
+.modify{border:none;background:#0080ff;color:white;padding: 5px 10px;border-radius:15px;margin-right:10px;cursor:pointer}
+.delete{border:none;background:#0080ff;color:white;padding: 5px 10px;border-radius:15px;cursor:pointer}
+.first_slogan{font-family:"bm dohyeon";font-size:30px;width: 750px;line-height: calc(95vh - 200px);text-align:center;color:#0080ff}
     
 </style>
 </head>
@@ -160,7 +160,7 @@ function notice_del(p_idx) {
                                         <label for="search_box" class="search_wrap">
                                             <input
                                                 type="text"
-                                                placeholder="검색어를 입력해주세요"
+                                                placeholder="회사 이름을 입력해주세요"
                                                 class="search_box"
                                                 name="search_box">
                                                 <svg
@@ -228,7 +228,7 @@ function notice_del(p_idx) {
         mysqli_query($dbcon,$sql);
         ?>
             <div class="detail_header">
-        <?php if($s_id == "admin" || $s_name == $array["writer"]){ ?>
+        <?php if($s_id == "admin" || $s_name == $array["p_company_name"]){ ?>
             <div class="sidebox">
             <a href="modify.php?p_idx=<?php echo $p_idx;?>"><button class="modify">수정</button></a>
             <a href="#" onclick="notice_del(<?php echo $p_idx;?>)"><button class="delete">삭제</button></a>
@@ -248,7 +248,7 @@ function notice_del(p_idx) {
                         </div>
                         </div>
                         <div class="detail_content">
-                        <p><span>지역</span><?php echo $array['p_location'];?></p>
+                        <p><span>지역</span><?php echo $array['p_location'];?> > <?php echo $array['p_location_detail'];?></p>
                         <p><span>회사명</span><?php echo $array['p_company_name'];?></p>
                         <p><span>서비스 항구</span><?php echo $array['p_port'];?></p>
                         <p><span>서비스 ITEM</span>서비스 아이템</p>
@@ -259,7 +259,7 @@ function notice_del(p_idx) {
                         <p><span>FAX</span><?php echo $array['p_fax'];?></p>
                         <p><span>Email</span><?php echo $array['p_email'];?></p>
                         <p><span>홈페이지</span><?php echo $array['p_web'];?></p>
-                        <p><span>비고</span><?php echo $array['p_note'];?></p>
+                        <p class="note_box"><span>비고</span><span class="note"><?php echo $array['p_note'];?></span></p>
                         </div>
                         <?php }?>
         </div>

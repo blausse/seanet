@@ -190,5 +190,6 @@
     border-radius: 20px;
     border: 1px solid #e0e0e0;
     background: #fff;
-    color: #666
+    color: #666;
+    cursor: pointer;
 }

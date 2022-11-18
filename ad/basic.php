@@ -25,6 +25,9 @@
     <script src="/web_project/script/jquery.js"></script>
     <script src="/web_project/script/jquery.nice-select.js"></script>
     <script src="/web_project/script/script.js" type="text/javascript"></script>
+    <script src="/web_project/script/gnb.js" type="text/javascript"></script>
+    <script src="/web_project/script/top_menu.js" type="text/javascript"></script>
+    <script src="/web_project/script/popular_rank.js" type="text/javascript"></script>
     <script></script>
 </head>
 
@@ -84,28 +87,17 @@
                                 <li><label for=""><input type="checkbox" name="" value="해외전역">해외전역</label></li>
                             </ul>
                             <ul class="ad_salary">
-                                <li><label for=""><input type="checkbox" name="" value="220 만원 이하">220 만원 이하</label>
-                                </li>
-                                <li><label for=""><input type="checkbox" name="" value="220 - 250 만원">220 - 250
-                                        만원</label></li>
-                                <li><label for=""><input type="checkbox" name="" value="250 - 300 만원">250 - 300
-                                        만원</label></li>
-                                <li><label for=""><input type="checkbox" name="" value="300 - 350 만원">300 - 350
-                                        만원</label></li>
-                                <li><label for=""><input type="checkbox" name="" value="350 - 400 만원">350 - 400
-                                        만원</label></li>
-                                <li><label for=""><input type="checkbox" name="" value="400 - 500 만원">400 - 500
-                                        만원</label></li>
-                                <li><label for=""><input type="checkbox" name="" value="500 - 600 만원">500 - 600
-                                        만원</label></li>
-                                <li><label for=""><input type="checkbox" name="" value="600 - 700 만원">600 - 700
-                                        만원</label></li>
-                                <li><label for=""><input type="checkbox" name="" value="700 - 800 만원">700 - 800
-                                        만원</label></li>
-                                <li><label for=""><input type="checkbox" name="" value="800 - 900 만원">800 - 900
-                                        만원</label></li>
-                                <li><label for=""><input type="checkbox" name="" value="900 만원 이상">900 만원 이상</label>
-                                </li>
+                                <li><label for=""><input type="checkbox" name="" value="220 만원 이하">220 만원 이하</label></li>
+                                <li><label for=""><input type="checkbox" name="" value="220 - 250 만원">220 - 250만원</label></li>
+                                <li><label for=""><input type="checkbox" name="" value="250 - 300 만원">250 - 300만원</label></li>
+                                <li><label for=""><input type="checkbox" name="" value="300 - 350 만원">300 - 350만원</label></li>
+                                <li><label for=""><input type="checkbox" name="" value="350 - 400 만원">350 - 400만원</label></li>
+                                <li><label for=""><input type="checkbox" name="" value="400 - 500 만원">400 - 500만원</label></li>
+                                <li><label for=""><input type="checkbox" name="" value="500 - 600 만원">500 - 600만원</label></li>
+                                <li><label for=""><input type="checkbox" name="" value="600 - 700 만원">600 - 700만원</label></li>
+                                <li><label for=""><input type="checkbox" name="" value="700 - 800 만원">700 - 800만원</label></li>
+                                <li><label for=""><input type="checkbox" name="" value="800 - 900 만원">800 - 900만원</label></li>
+                                <li><label for=""><input type="checkbox" name="" value="900 만원 이상">900 만원 이상</label></li>
                                 <li><label for=""><input type="checkbox" name="" value="내규">내규</label></li>
                                 <li><label for=""><input type="checkbox" name="" value="협의">협의</label></li>
                             </ul>
@@ -137,8 +129,7 @@
                                 <li><label for=""><input type="checkbox" name="" value="외국계">외국계</label></li>
                                 <li><label for=""><input type="checkbox" name="" value="코스닥">코스닥</label></li>
                                 <li><label for=""><input type="checkbox" name="" value="주식회사">주식회사</label></li>
-                                <li><label for=""><input type="checkbox" name="" value="병역특례 인증 업체">병역특례 인증 업체</label>
-                                </li>
+                                <li><label for=""><input type="checkbox" name="" value="병역특례 인증 업체">병역특례 인증 업체</label></li>
                                 <li><label for=""><input type="checkbox" name="" value="중견기업">중견기업</label></li>
                                 <li><label for=""><input type="checkbox" name="" value="중소기업">중소기업</label></li>
                                 <li><label for=""><input type="checkbox" name="" value="기타">기타</label></li>
