@@ -38,7 +38,7 @@
                     </svg>
                 </a>
                 <ul class="gnb">
-                    <li class="gnb1"><a href="/web_project/ad/ad_basic.php">구인광고
+                    <li class="gnb1"><a href="/web_project/ad/basic.php">구인광고
                             <ul>
                                 <li><a href="/web_project/ad/basic.php">구인광고 검색</a></li>
                                 <li><a href="/web_project/ad/write.php">구인광고 등록</a></li>
@@ -54,7 +54,7 @@
                         </a></li>
                     <li class="gnb3"><a href="/web_project/provision/list.php">선식, 선용품
                             <ul>
-                                <li><a href="/web_procject/provision/list.php">업체조회</a></li>
+                                <li><a href="/web_project/provision/list.php">업체조회</a></li>
                                 <li><a href="#">배송조회</a></li>
                                 <li><a href="/web_project/provision/reg.php">업체등록</a></li>
                                 <li><a href="/web_project/provision/guide.php">이용안내</a></li>
@@ -82,7 +82,7 @@
                 <button class='logout' id='logout' onclick="location.href = '/web_project/login/logout.php'">로그아웃</button>
                 <button class='mypage' id='mypage' onclick="location.href = '/web_project/members/member_info.php'">마이페이지</button>
                 <?php }; ?>
-                <button class="customercenter" id="customercenter" onclick="location.href = '/web_project/qna.php'">고객센터</button>
+                <button class="customercenter" id="customercenter" onclick="location.href = '/web_project/qna/qna.php'">고객센터</button>
             </div>
         </div>
     </header>

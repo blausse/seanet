@@ -1,7 +1,7 @@
 <?php
 include "../inc/session.php";
 include "../inc/dbcon.php";
-$sql = "select idx from notice where idx=$n_idx;";
+$sql = "select idx from ad_company where idx=$n_idx;";
 if(!$s_idx || $s_idx !== "$n_idx"){
     echo "
     <script type='text/javascript'>

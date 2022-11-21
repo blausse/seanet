@@ -32,7 +32,10 @@
     <script src="/web_project/script/datepicker.js" type="text/javascript"></script>
     <script>
         function regCheck(){
-
+if(!$('#file').val()){
+alert("이미지를 첨부해주세요.");
+return false;
+};
         };
         function emailChange(){
 var domain = $('#c_email_sel option:selected').val();
@@ -93,7 +96,7 @@ textarea{width: 100%;resize:none;height: 400px;border:none;font-family:"roboto,n
     <div class="wrap">
     <?php include("../html_inc/header.inc"); ?>
         <main>
-                <form action="insert.php" name="provision_list.form" method="post" enctype="multipart/form-data" onsubmit="regCheck()">
+                <form action="insert.php" name="provision_list.form" method="post" enctype="multipart/form-data" onsubmit="return regCheck()">
                     <fieldset class="reg_wrap">
                         <legend>구인광고 등록</legend>
                         <p class="sub_title">기업정보 입력</p>
@@ -133,87 +136,87 @@ textarea{width: 100%;resize:none;height: 400px;border:none;font-family:"roboto,n
                         <p class="ai_item_title"><button type="button">직무</button><button type="button">지역</button><button type="button">급여</button><button type="button">학력</button><button type="button">근무형태</button><button type="button">기업형태</button></p>
                         <span class="err_text"></span>
                         <div class="ai_item">
-                        <span class="check_box"><label for="ai_work1"><input type="checkbox" name="ai_work" id="ai_work1" value="해기사">해기사</label></span>
-                        <span class="check_box"><label for="ai_work2"><input type="checkbox" name="ai_work" id="ai_work2" value="조선, 수리">조선, 수리</label></span>
-                        <span class="check_box"><label for="ai_work3"><input type="checkbox" name="ai_work" id="ai_work3" value="용선, 중개">용선, 중개</label></span>
-                        <span class="check_box"><label for="ai_work4"><input type="checkbox" name="ai_work" id="ai_work4" value="원양, 수산">원양, 수산</label></span>
-                        <span class="check_box"><label for="ai_work5"><input type="checkbox" name="ai_work" id="ai_work5" value="공무감독">공무감독</label></span>
-                        <span class="check_box"><label for="ai_work6"><input type="checkbox" name="ai_work" id="ai_work6" value="해양레저관광">해양레저관광</label></span>
-                        <span class="check_box"><label for="ai_work7"><input type="checkbox" name="ai_work" id="ai_work7" value="항해, 통신">항해, 통신</label></span>
-                        <span class="check_box"><label for="ai_work8"><input type="checkbox" name="ai_work" id="ai_work8" value="해양연구">해양연구</label></span>
-                        <span class="check_box"><label for="ai_work9"><input type="checkbox" name="ai_work" id="ai_work9" value="해운, 항만">해운, 항만</label></span>
-                        <span class="check_box"><label for="ai_work10"><input type="checkbox" name="ai_work" id="ai_work10" value="공공">공공</label></span>
-                        <span class="check_box"><label for="ai_work11"><input type="checkbox" name="ai_work" id="ai_work11" value="운항,관리">운항, 관리</label></span>
-                        <span class="check_box"><label for="ai_work12"><input type="checkbox" name="ai_work" id="ai_work12" value="해양행정기관">해양행정기관</label></span>
-                        <span class="check_box"><label for="ai_work13"><input type="checkbox" name="ai_work" id="ai_work13" value="IT개발, 데이터">IT개발, 데이터</label></span>
-                        <span class="check_box"><label for="ai_work14"><input type="checkbox" name="ai_work" id="ai_work14" value="기타">기타</label></span>
+                        <span class="check_box"><label for="ai_work1"><input type="checkbox" name="ai_work[]" id="ai_work1" value="해기사">해기사</label></span>
+                        <span class="check_box"><label for="ai_work2"><input type="checkbox" name="ai_work[]" id="ai_work2" value="조선,수리">조선, 수리</label></span>
+                        <span class="check_box"><label for="ai_work3"><input type="checkbox" name="ai_work[]" id="ai_work3" value="용선,중개">용선, 중개</label></span>
+                        <span class="check_box"><label for="ai_work4"><input type="checkbox" name="ai_work[]" id="ai_work4" value="원양,수산">원양, 수산</label></span>
+                        <span class="check_box"><label for="ai_work5"><input type="checkbox" name="ai_work[]" id="ai_work5" value="공무감독">공무감독</label></span>
+                        <span class="check_box"><label for="ai_work6"><input type="checkbox" name="ai_work[]" id="ai_work6" value="해양레저관광">해양레저관광</label></span>
+                        <span class="check_box"><label for="ai_work7"><input type="checkbox" name="ai_work[]" id="ai_work7" value="항해,통신">항해, 통신</label></span>
+                        <span class="check_box"><label for="ai_work8"><input type="checkbox" name="ai_work[]" id="ai_work8" value="해양연구">해양연구</label></span>
+                        <span class="check_box"><label for="ai_work9"><input type="checkbox" name="ai_work[]" id="ai_work9" value="해운,항만">해운, 항만</label></span>
+                        <span class="check_box"><label for="ai_work10"><input type="checkbox" name="ai_work[]" id="ai_work10" value="공공">공공</label></span>
+                        <span class="check_box"><label for="ai_work11"><input type="checkbox" name="ai_work[]" id="ai_work11" value="운항,관리">운항, 관리</label></span>
+                        <span class="check_box"><label for="ai_work12"><input type="checkbox" name="ai_work[]" id="ai_work12" value="해양행정기관">해양행정기관</label></span>
+                        <span class="check_box"><label for="ai_work13"><input type="checkbox" name="ai_work[]" id="ai_work13" value="IT개발,데이터">IT개발, 데이터</label></span>
+                        <span class="check_box"><label for="ai_work14"><input type="checkbox" name="ai_work[]" id="ai_work14" value="기타">기타</label></span>
                         </div>
                         <div class="ai_item">
-                        <span class="check_box"><label for="ai_location1"><input type="checkbox" name="ai_locaion" id="ai_location1" value="서울">서울</label></span>
-                        <span class="check_box"><label for="ai_location2"><input type="checkbox" name="ai_locaion" id="ai_location2" value="인천">인천</label></span>
-                        <span class="check_box"><label for="ai_location3"><input type="checkbox" name="ai_locaion" id="ai_location3" value="대전">대전</label></span>
-                        <span class="check_box"><label for="ai_location4"><input type="checkbox" name="ai_locaion" id="ai_location4" value="대구">대구</label></span>
-                        <span class="check_box"><label for="ai_location5"><input type="checkbox" name="ai_locaion" id="ai_location5" value="부산">부산</label></span>
-                        <span class="check_box"><label for="ai_location6"><input type="checkbox" name="ai_locaion" id="ai_location6" value="광주">광주</label></span>
-                        <span class="check_box"><label for="ai_location7"><input type="checkbox" name="ai_locaion" id="ai_location7" value="울산">울산</label></span>
-                        <span class="check_box"><label for="ai_location8"><input type="checkbox" name="ai_locaion" id="ai_location8" value="세종">세종</label></span>
-                        <span class="check_box"><label for="ai_location9"><input type="checkbox" name="ai_locaion" id="ai_location9" value="강원">강원</label></span>
-                        <span class="check_box"><label for="ai_location10"><input type="checkbox" name="ai_locaion" id="ai_locatio10" value="충북">충북</label></span>
-                        <span class="check_box"><label for="ai_location11"><input type="checkbox" name="ai_locaion" id="ai_location11" value="충남">충남</label></span>
-                        <span class="check_box"><label for="ai_location12"><input type="checkbox" name="ai_locaion" id="ai_location12" value="전북">전북</label></span>
-                        <span class="check_box"><label for="ai_location13"><input type="checkbox" name="ai_locaion" id="ai_location13" value="전남">전남</label></span>
-                        <span class="check_box"><label for="ai_location14"><input type="checkbox" name="ai_locaion" id="ai_location14" value="경북">경북</label></span>
-                        <span class="check_box"><label for="ai_location15"><input type="checkbox" name="ai_locaion" id="ai_location15" value="경남">경남</label></span>
-                        <span class="check_box"><label for="ai_location16"><input type="checkbox" name="ai_locaion" id="ai_location16" value="국내전역">국내전역</label></span>
-                        <span class="check_box"><label for="ai_location17"><input type="checkbox" name="ai_locaion" id="ai_location17" value="해외전역">해외전역</label></span>
+                        <span class="check_box"><label for="ai_location1"><input type="checkbox" name="ai_location[]" id="ai_location1" value="서울">서울</label></span>
+                        <span class="check_box"><label for="ai_location2"><input type="checkbox" name="ai_location[]" id="ai_location2" value="인천">인천</label></span>
+                        <span class="check_box"><label for="ai_location3"><input type="checkbox" name="ai_location[]" id="ai_location3" value="대전">대전</label></span>
+                        <span class="check_box"><label for="ai_location4"><input type="checkbox" name="ai_location[]" id="ai_location4" value="대구">대구</label></span>
+                        <span class="check_box"><label for="ai_location5"><input type="checkbox" name="ai_location[]" id="ai_location5" value="부산">부산</label></span>
+                        <span class="check_box"><label for="ai_location6"><input type="checkbox" name="ai_location[]" id="ai_location6" value="광주">광주</label></span>
+                        <span class="check_box"><label for="ai_location7"><input type="checkbox" name="ai_location[]" id="ai_location7" value="울산">울산</label></span>
+                        <span class="check_box"><label for="ai_location8"><input type="checkbox" name="ai_location[]" id="ai_location8" value="세종">세종</label></span>
+                        <span class="check_box"><label for="ai_location9"><input type="checkbox" name="ai_location[]" id="ai_location9" value="강원">강원</label></span>
+                        <span class="check_box"><label for="ai_location10"><input type="checkbox" name="ai_location[]" id="ai_locatio10" value="충북">충북</label></span>
+                        <span class="check_box"><label for="ai_location11"><input type="checkbox" name="ai_location[]" id="ai_location11" value="충남">충남</label></span>
+                        <span class="check_box"><label for="ai_location12"><input type="checkbox" name="ai_location[]" id="ai_location12" value="전북">전북</label></span>
+                        <span class="check_box"><label for="ai_location13"><input type="checkbox" name="ai_location[]" id="ai_location13" value="전남">전남</label></span>
+                        <span class="check_box"><label for="ai_location14"><input type="checkbox" name="ai_location[]" id="ai_location14" value="경북">경북</label></span>
+                        <span class="check_box"><label for="ai_location15"><input type="checkbox" name="ai_location[]" id="ai_location15" value="경남">경남</label></span>
+                        <span class="check_box"><label for="ai_location16"><input type="checkbox" name="ai_location[]" id="ai_location16" value="국내전역">국내전역</label></span>
+                        <span class="check_box"><label for="ai_location17"><input type="checkbox" name="ai_location[]" id="ai_location17" value="해외전역">해외전역</label></span>
                         </div>
                         <div class="ai_item">
-                        <span class="check_box"><label for="ai_salary1"><input type="checkbox" name="ai_salary" id="ai_salary1" value="220 만원 이하">220 만원 이하</label></span>
-                        <span class="check_box"><label for="ai_salary2"><input type="checkbox" name="ai_salary" id="ai_salary2" value="220 - 250 만원">220 - 250만원</label></span>
-                        <span class="check_box"><label for="ai_salary3"><input type="checkbox" name="ai_salary" id="ai_salary3" value="250 - 300 만원">250 - 300만원</label></span>
-                        <span class="check_box"><label for="ai_salary4"><input type="checkbox" name="ai_salary" id="ai_salary4" value="300 - 350 만원">300 - 350만원</label></span>
-                        <span class="check_box"><label for="ai_salary5"><input type="checkbox" name="ai_salary" id="ai_salary5" value="350 - 400 만원">350 - 400만원</label></span>
-                        <span class="check_box"><label for="ai_salary6"><input type="checkbox" name="ai_salary" id="ai_salary6" value="400 - 500 만원">400 - 500만원</label></span>
-                        <span class="check_box"><label for="ai_salary7"><input type="checkbox" name="ai_salary" id="ai_salary7" value="500 - 600 만원">500 - 600만원</label></span>
-                        <span class="check_box"><label for="ai_salary8"><input type="checkbox" name="ai_salary" id="ai_salary8" value="600 - 700 만원">600 - 700만원</label></span>
-                        <span class="check_box"><label for="ai_salary9"><input type="checkbox" name="ai_salary" id="ai_salary9" value="700 - 800 만원">700 - 800만원</label></span>
-                        <span class="check_box"><label for="ai_salary10"><input type="checkbox" name="ai_salary" id="ai_salary10" value="800 - 900 만원">800 - 900만원</label></span>
-                        <span class="check_box"><label for="ai_salary11"><input type="checkbox" name="ai_salary" id="ai_salary11" value="900 만원 이상">900 만원 이상</label></span>
-                        <span class="check_box"><label for="ai_salary12"><input type="checkbox" name="ai_salary" id="ai_salary12" value="내규">내규</label></span>
-                        <span class="check_box"><label for="ai_salary13"><input type="checkbox" name="ai_salary" id="ai_salary13" value="협의">협의</label></span>
+                        <span class="check_box"><label for="ai_salary1"><input type="checkbox" name="ai_salary[]" id="ai_salary1" value="220만원 이하">220 만원 이하</label></span>
+                        <span class="check_box"><label for="ai_salary2"><input type="checkbox" name="ai_salary[]" id="ai_salary2" value="220-250만원">220 - 250만원</label></span>
+                        <span class="check_box"><label for="ai_salary3"><input type="checkbox" name="ai_salary[]" id="ai_salary3" value="250-300만원">250 - 300만원</label></span>
+                        <span class="check_box"><label for="ai_salary4"><input type="checkbox" name="ai_salary[]" id="ai_salary4" value="300-350만원">300 - 350만원</label></span>
+                        <span class="check_box"><label for="ai_salary5"><input type="checkbox" name="ai_salary[]" id="ai_salary5" value="350-400만원">350 - 400만원</label></span>
+                        <span class="check_box"><label for="ai_salary6"><input type="checkbox" name="ai_salary[]" id="ai_salary6" value="400-500만원">400 - 500만원</label></span>
+                        <span class="check_box"><label for="ai_salary7"><input type="checkbox" name="ai_salary[]" id="ai_salary7" value="500-600만원">500 - 600만원</label></span>
+                        <span class="check_box"><label for="ai_salary8"><input type="checkbox" name="ai_salary[]" id="ai_salary8" value="600-700만원">600 - 700만원</label></span>
+                        <span class="check_box"><label for="ai_salary9"><input type="checkbox" name="ai_salary[]" id="ai_salary9" value="700-800만원">700 - 800만원</label></span>
+                        <span class="check_box"><label for="ai_salary10"><input type="checkbox" name="ai_salary[]" id="ai_salary10" value="800-900만원">800 - 900만원</label></span>
+                        <span class="check_box"><label for="ai_salary11"><input type="checkbox" name="ai_salary[]" id="ai_salary11" value="900만원 이상">900 만원 이상</label></span>
+                        <span class="check_box"><label for="ai_salary12"><input type="checkbox" name="ai_salary[]" id="ai_salary12" value="내규">내규</label></span>
+                        <span class="check_box"><label for="ai_salary13"><input type="checkbox" name="ai_salary[]" id="ai_salary13" value="협의">협의</label></span>
                         </div>
                         <div class="ai_item">
-                        <span class="check_box"><label for="ai_school1"><input type="checkbox" name="ai_school" id="ai_school1" value="초등학교 졸업">초등학교 졸업</label></span>
-                        <span class="check_box"><label for="ai_school2"><input type="checkbox" name="ai_school" id="ai_school2" value="중학교 졸업">중학교 졸업</label></span>
-                        <span class="check_box"><label for="ai_school3"><input type="checkbox" name="ai_school" id="ai_school3" value="고등학교 졸업">고등학교 졸업</label></span>
-                        <span class="check_box"><label for="ai_school4"><input type="checkbox" name="ai_school" id="ai_school4" value="전문 학사">전문 학사</label></span>
-                        <span class="check_box"><label for="ai_school5"><input type="checkbox" name="ai_school" id="ai_school5" value="일반 학사">일반 학사</label></span>
-                        <span class="check_box"><label for="ai_school6"><input type="checkbox" name="ai_school" id="ai_school6" value="석사, 박사">석사, 박사</label></span>
+                        <span class="check_box"><label for="ai_school1"><input type="checkbox" name="ai_school[]" id="ai_school1" value="초등학교 졸업">초등학교 졸업</label></span>
+                        <span class="check_box"><label for="ai_school2"><input type="checkbox" name="ai_school[]" id="ai_school2" value="중학교 졸업">중학교 졸업</label></span>
+                        <span class="check_box"><label for="ai_school3"><input type="checkbox" name="ai_school[]" id="ai_school3" value="고등학교 졸업">고등학교 졸업</label></span>
+                        <span class="check_box"><label for="ai_school4"><input type="checkbox" name="ai_school[]" id="ai_school4" value="전문 학사">전문 학사</label></span>
+                        <span class="check_box"><label for="ai_school5"><input type="checkbox" name="ai_school[]" id="ai_school5" value="일반 학사">일반 학사</label></span>
+                        <span class="check_box"><label for="ai_school6"><input type="checkbox" name="ai_school[]" id="ai_school6" value="석사,박사">석사, 박사</label></span>
                         </div>
                         <div class="ai_item">
-                        <span class="check_box"><label for="ai_worktype1"><input type="checkbox" name="ai_worktype" id="ai_worktype1" value="정규직">정규직</label></span>
-                        <span class="check_box"><label for="ai_worktype2"><input type="checkbox" name="ai_worktype" id="ai_worktype2" value="계약직">계약직</label></span>
-                        <span class="check_box"><label for="ai_worktype3"><input type="checkbox" name="ai_worktype" id="ai_worktype3" value="파견직">파견직</label></span>
-                        <span class="check_box"><label for="ai_worktype4"><input type="checkbox" name="ai_worktype" id="ai_worktype4" value="인턴">인턴</label></span>
-                        <span class="check_box"><label for="ai_worktype5"><input type="checkbox" name="ai_worktype" id="ai_worktype5" value="병역특례">병역특례</label></span>
-                        <span class="check_box"><label for="ai_worktype6"><input type="checkbox" name="ai_worktype" id="ai_worktype6" value="아르바이트">아르바이트</label></span>
-                        <span class="check_box"><label for="ai_worktype7"><input type="checkbox" name="ai_worktype" id="ai_worktype7" value="전임">전임</label></span>
-                        <span class="check_box"><label for="ai_worktype8"><input type="checkbox" name="ai_worktype" id="ai_worktype8" value="교육생">교육생</label></span>
-                        <span class="check_box"><label for="ai_worktype9"><input type="checkbox" name="ai_worktype" id="ai_worktype9" value="프리랜서">프리랜서</label></span>
-                        <span class="check_box"><label for="ai_worktype10"><input type="checkbox" name="ai_worktype" id="ai_worktype10" value="해외취업">해외취업</label></span>
-                        <span class="check_box"><label for="ai_worktype11"><input type="checkbox" name="ai_worktype" id="ai_worktype11" value="파트">파트</label></span>
-                        <span class="check_box"><label for="ai_worktype12"><input type="checkbox" name="ai_worktype" id="ai_worktype12" value="위촉직">위촉직</label></span>
-                        <span class="check_box"><label for="ai_worktype13"><input type="checkbox" name="ai_worktype" id="ai_worktype13" value="기타">기타</label></span>
+                        <span class="check_box"><label for="ai_worktype1"><input type="checkbox" name="ai_worktype[]" id="ai_worktype1" value="정규직">정규직</label></span>
+                        <span class="check_box"><label for="ai_worktype2"><input type="checkbox" name="ai_worktype[]" id="ai_worktype2" value="계약직">계약직</label></span>
+                        <span class="check_box"><label for="ai_worktype3"><input type="checkbox" name="ai_worktype[]" id="ai_worktype3" value="파견직">파견직</label></span>
+                        <span class="check_box"><label for="ai_worktype4"><input type="checkbox" name="ai_worktype[]" id="ai_worktype4" value="인턴">인턴</label></span>
+                        <span class="check_box"><label for="ai_worktype5"><input type="checkbox" name="ai_worktype[]" id="ai_worktype5" value="병역특례">병역특례</label></span>
+                        <span class="check_box"><label for="ai_worktype6"><input type="checkbox" name="ai_worktype[]" id="ai_worktype6" value="아르바이트">아르바이트</label></span>
+                        <span class="check_box"><label for="ai_worktype7"><input type="checkbox" name="ai_worktype[]" id="ai_worktype7" value="전임">전임</label></span>
+                        <span class="check_box"><label for="ai_worktype8"><input type="checkbox" name="ai_worktype[]" id="ai_worktype8" value="교육생">교육생</label></span>
+                        <span class="check_box"><label for="ai_worktype9"><input type="checkbox" name="ai_worktype[]" id="ai_worktype9" value="프리랜서">프리랜서</label></span>
+                        <span class="check_box"><label for="ai_worktype10"><input type="checkbox" name="ai_worktype[]" id="ai_worktype10" value="해외취업">해외취업</label></span>
+                        <span class="check_box"><label for="ai_worktype11"><input type="checkbox" name="ai_worktype[]" id="ai_worktype11" value="파트">파트</label></span>
+                        <span class="check_box"><label for="ai_worktype12"><input type="checkbox" name="ai_worktype[]" id="ai_worktype12" value="위촉직">위촉직</label></span>
+                        <span class="check_box"><label for="ai_worktype13"><input type="checkbox" name="ai_worktype[]" id="ai_worktype13" value="기타">기타</label></span>
                         </div>
                         <div class="ai_item">
-                        <span class="check_box"><label for="ai_ctype1"><input type="checkbox" name="ai_ctype" id="ai_ctype1" value="대기업">대기업</label></span>
-                        <span class="check_box"><label for="ai_ctype2"><input type="checkbox" name="ai_ctype" id="ai_ctype2" value="외국계">외국계</label></span>
-                        <span class="check_box"><label for="ai_ctype3"><input type="checkbox" name="ai_ctype" id="ai_ctype3" value="코스닥">코스닥</label></span>
-                        <span class="check_box"><label for="ai_ctype4"><input type="checkbox" name="ai_ctype" id="ai_ctype4" value="주식회사">주식회사</label></span>
-                        <span class="check_box"><label for="ai_ctype5"><input type="checkbox" name="ai_ctype" id="ai_ctype5" value="병역특례 인증 업체">병역특례 인증 업체</label></span>
-                        <span class="check_box"><label for="ai_ctype6"><input type="checkbox" name="ai_ctype" id="ai_ctype6" value="중견기업">중견기업</label></span>
-                        <span class="check_box"><label for="ai_ctype7"><input type="checkbox" name="ai_ctype" id="ai_ctype7" value="중소기업">중소기업</label></span>
-                        <span class="check_box"><label for="ai_ctype8"><input type="checkbox" name="ai_ctype" id="ai_ctype8" value="기타">기타</label></span>
+                        <span class="check_box"><label for="ai_ctype1"><input type="checkbox" name="ai_ctype[]" id="ai_ctype1" value="대기업">대기업</label></span>
+                        <span class="check_box"><label for="ai_ctype2"><input type="checkbox" name="ai_ctype[]" id="ai_ctype2" value="외국계">외국계</label></span>
+                        <span class="check_box"><label for="ai_ctype3"><input type="checkbox" name="ai_ctype[]" id="ai_ctype3" value="코스닥">코스닥</label></span>
+                        <span class="check_box"><label for="ai_ctype4"><input type="checkbox" name="ai_ctype[]" id="ai_ctype4" value="주식회사">주식회사</label></span>
+                        <span class="check_box"><label for="ai_ctype5"><input type="checkbox" name="ai_ctype[]" id="ai_ctype5" value="병역특례 인증 업체">병역특례 인증 업체</label></span>
+                        <span class="check_box"><label for="ai_ctype6"><input type="checkbox" name="ai_ctype[]" id="ai_ctype6" value="중견기업">중견기업</label></span>
+                        <span class="check_box"><label for="ai_ctype7"><input type="checkbox" name="ai_ctype[]" id="ai_ctype7" value="중소기업">중소기업</label></span>
+                        <span class="check_box"><label for="ai_ctype8"><input type="checkbox" name="ai_ctype[]" id="ai_ctype8" value="기타">기타</label></span>
                         </div>
                         <label for="ai_career">경력</label><span class="err_text"></span>
                         <span class="text_box"><input type="text" name="ai_career" id="ai_career"></span>
