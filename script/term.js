@@ -76,7 +76,7 @@ $(document).ready(function () {
             alert("필수 약관에 동의하셔야 다음 단계로 진행 가능합니다.");
             return;
         } else {
-            $(location).attr('href', "http://localhost/web_project/members/choice.html");
+            $(location).attr('href', "http://localhost/web_project/members/choice.php");
             $("#term").submit();
         }
     })

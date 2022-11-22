@@ -18,38 +18,6 @@
     font-weight: bold;
 }
 
-.location {
-    position: relative;
-    width: 183px;
-    height: 40px;
-}
-
-.location_box {
-    width: 183px;
-    height: 30px;
-    font-size: 15px;
-    line-height: 30px;
-    box-sizing: border-box;
-    padding-left: 10px;
-    border: 1px solid #0080ff;
-}
-
-.product {
-    position: relative;
-    width: 183px;
-    height: 40px;
-}
-
-.product_box {
-    width: 183px;
-    height: 30px;
-    font-size: 15px;
-    line-height: 30px;
-    box-sizing: border-box;
-    padding-left: 10px;
-    border: 1px solid #0080ff;
-}
-
 
 
 .provision_wrap {
@@ -61,8 +29,17 @@
     position: relative;
 }
 
+.provision_glass {
+    width: 18px;
+    height: 18px;
+    z-index: 10;
+    position: absolute;
+    left: 12px;
+    top: 5px;
+}
+
 .search_box {
-    width: 500px;
+    width: 400px;
     font-size: 14px;
     height: 30px;
     border-radius: 20px;
@@ -72,22 +49,18 @@
     z-index: 9
 }
 
-.provision_glass {
-    width: 18px;
-    height: 18px;
-    z-index: 10;
-    position: absolute;
-    left: 420px;
-    top: 6px;
-}
-
 .txt_wrap {
     width: 1000px;
     height: 30px;
-    margin-bottom: 70px;
+    margin-bottom: 40px;
+}
+
+.sear_box {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+}
+
+.box_wrap {
     position: relative;
 }
 

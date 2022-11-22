@@ -43,6 +43,8 @@
                                 <li><a href="/web_project/ad/basic.php">구인광고 검색</a></li>
                                 <li><a href="/web_project/ad/write.php">구인광고 등록</a></li>
                                 <li><a href="/web_project/ad/list.php">구인광고 상세</a></li>
+                                <li><a href="/web_project/ad/list.php">VIP 광고 등록</a></li>
+                                <li><a href="/web_project/ad/list.php">VIP 광고 신청</a></li>
                             </ul>
                         </a></li>
                     <li class="gnb2"><a href="#">Seaman's Voice
@@ -55,7 +57,7 @@
                     <li class="gnb3"><a href="/web_project/provision/list.php">선식, 선용품
                             <ul>
                                 <li><a href="/web_project/provision/list.php">업체조회</a></li>
-                                <li><a href="#">배송조회</a></li>
+                                <li><a href="#" onclick="provCheck()">배송조회</a></li>
                                 <li><a href="/web_project/provision/reg.php">업체등록</a></li>
                                 <li><a href="/web_project/provision/guide.php">이용안내</a></li>
                             </ul>
@@ -70,8 +72,8 @@
             <div class="top_menu_wrap">
                 <h2 class="hide">top menu</h2>
                 <?php if(!$s_idx){ ?>
-                <button  class='login'>로그인</button>
-                <button class='signup' id='signup'>회원가입</button>
+                <button  class='login' onclick="location.href = '/web_project/login/login.php'">로그인</button>
+                <button class='signup' id='signup' onclick="location.href = '/web_project/members/term.php'">회원가입</button>
                 <?php }else if($s_id == "admin"){ ?>
                 <span class='print_name'><?php echo "$s_name"?>님, 안녕하세요</span>
                 <button class='logout' id='logout' onclick="location.href = '/web_project/login/logout.php'">로그아웃</button>
@@ -86,3 +88,6 @@
             </div>
         </div>
     </header>
+    <script>function provCheck(){
+window.open("/web_project/provision/check.php","배송조회","width=1000,height=400");
+            };</script>

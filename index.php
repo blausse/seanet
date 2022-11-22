@@ -1,5 +1,9 @@
 <?php
 include "inc/session.php";
+include "inc/dbcon.php";
+$sql = "select * from ad_company join ad_info on ad_company.idx = ad_info.idx order by ad_company.idx desc;";
+$result = mysqli_query($dbcon,$sql);
+$list_num = 3;
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +18,7 @@ include "inc/session.php";
     <link rel="stylesheet" href="css/vip_ad.css" type="text/css">
     <link rel="stylesheet" href="css/mainbanner.css" type="text/css">
     <link rel="stylesheet" href="css/voice.css" type="text/css">
-    <link rel="stylesheet" href="css/provision copy.css" type="text/css">
+    <link rel="stylesheet" href="css/prov_box.css" type="text/css">
     <link rel="stylesheet" href="css/normal_ad.css" type="text/css">
     <link rel="stylesheet" href="css/rank.css" type="text/css">
     <link rel="stylesheet" href="css/main_bg.css" type="text/css">
@@ -27,9 +31,46 @@ include "inc/session.php";
     <script src="script/main_banner.js" type="text/javascript"></script>
     <script src="script/mainpage_btn.js" type="text/javascript"></script>
     <script src="script/popular_rank.js" type="text/javascript"></script>
-    <script src="script/top_menu.js" type="text/javascript"></script>
     <script>
-    </script>
+            function locationChange(){
+                 $cate = $('.location_box option:selected').val();
+                if ($cate == "korea") {
+                  $('.list').eq(1).html(
+                    "<li class='option selected focus'>세부 지역</li><li class='option'>서해</li><li class='option'>동해</li><li class='option'>남해</li><li class='option'>국내 전역</li><li class='option'>기타</li>"
+                  );
+                } else if ($cate == "asia") {
+                  $('.list').eq(1).html(
+                    "<li class='option selected focus'>세부 지역</li><li class='option'>중국</li><li class='option'>인도</li><li class='option'>일본</li><li class='option'>러시아</li><li class='option'>싱가폴</li><li class='option'>필리핀</li><li class='option'>인도네시아</li><li class='option'>중동</li><li class='option'>아시아 전역</li><li class='option'>기타</li>"
+                  );
+                } else if ($cate == "america") {
+                  $('.list').eq(1).html(
+                    "<li class='option selected focus'>세부 지역</li><li class='option'>북미 서안</li><li class='option'>북미 동안</li><li class='option'>북미 전역</li><li class='option'>파나마-발보아</li><li class='option'>파나마-크리스토발</li><li class='option'>중남미 전역</li><li class='option'>남미 서안</li><li class='option'>남미 동안</li><li class='option'>남미 전역</li><li class='option'>기타</li>"
+                  );
+                } else if ($cate == "europe") {
+                  $('.list').eq(1).html(
+                    "<li class='option selected focus'>세부 지역</li><li class='option'>서유럽</li><li class='option'>동유럽</li><li class='option'>북유럽</li><li class='option'>지중해</li><li class='option'>유럽 전역</li><li class='option'>기타</li>"
+                  );
+                } else if ($cate == "africa") {
+                  $('.list').eq(1).html(
+                    "<li class='option selected focus'>세부 지역</li><li class='option'>아프리카 서안</li><li class='option'>아프리카 동안</li><li class='option'>남아프리카공화국</li><li class='option'>아프리카 전역</li><li class='option'>기타</li>"
+                  );
+                } else if ($cate == "oseania") {
+                  $('.list').eq(1).html(
+                    "<li class='option selected focus'>세부 지역</li><li class='option'>호주</li><li class='option'>뉴질랜드</li><li class='option'>오세아니아 전역</li><li class='option'>기타</li>"
+                  );
+                } else if (!$cate) {
+                  $('.list').eq(1).html(
+                    "<li class='option selected focus'>세부 지역</li>"
+                  );
+                }
+
+                $current = $('.current').eq(1);
+                $current.text('세부 지역');
+            };
+
+
+</script>
+
 </head>
 
 <body>
@@ -252,84 +293,36 @@ include "inc/session.php";
                     </section>
                 </form>
             </section>
-            <section class="provision_box">
-                <form class="provision_bg">
-                    <fieldset class="provision_wrap">
-                        <h2 class="provision_txt">PROVISION <br>&<br> SPARE/STORE</h2>
-                        <div class="txt_wrap">
-                            <div class="location">
-                                <select name="" id="location_box">
-                                    <option>지역선택</option>
-                                    <option>국내</option>
-                                    <option>미주서안</option>
-                                    <option>미주동안</option>
-                                    <option>아시아</option>
-                                    <option>아프리카,중동</option>
-                                    <option>유럽</option>
-                                    <option>중남미</option>
-                                    <option>호주,뉴질랜드</option>
-                                </select>
-                            </div>
-                            <div class="product">
-                                <select name="" id="product_box">
-                                    <option>제품선택</option>
-                                    <option>선식</option>
-                                    <option>빌지처리</option>
-                                    <option>선창클리닝</option>
-                                    <option>선박부품</option>
-                                    <option>선박수리</option>
-                                    <option>주부식</option>
-                                    <option>면세품</option>
-                                    <option>선용품</option>
-                                    <option>슬러지 양륙</option>
-                                    <option>기부속</option>
-                                    <option>청수</option>
-                                    <option>쓰레기, 폐유처리</option>
-                                    <option>선용금</option>
-                                    <option>SPRO계약</option>
-                                    <option>개인물품</option>
-                                    <option>세탁물</option>
-                                    <option>대리점 업무</option>
-                                    <option>기타</option>
-                                </select>
-                            </div>
-                            <input type="text" placeholder="검색어를 입력해주세요" class="search_box"><svg class="provision_glass"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path
-                                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z" />
-                            </svg>
-                            <button class="provision_search_btn">검색</button>
-                        </div>
-                        <ul class="bg_icon">
-                            <li class="company"><a href="#" class="company_icon">
-                                    <figure class="fig1"><img src="images/company.png" alt="업체조회">
-                                        <figcaption class="figcap1">업체조회</figcaption>
-                                    </figure>
-                                </a></li>
-                            <li class="check"><a href="#" class="check_icon">
-                                    <figure class="fig2"><img src="images/check.png" alt="배송조회">
-                                        <figcaption class="figcap2">배송조회</figcaption>
-                                    </figure>
-                                </a></li>
-                            <li class="reg"><a href="provision_reg.html" class="reg_icon">
-                                    <figure class="fig3"><img src="images/reg.png" alt="배송조회">
-                                        <figcaption class="figcap3">업체등록</figcaption>
-                                    </figure>
-                                </a></li>
-                            <li class="guide"><a href="provision_guide.html" class="guide_icon">
-                                    <figure class="fig4"><img src="images/guide.png" alt="이용안내">
-                                        <figcaption class="figcap4">이용안내</figcaption>
-                                    </figure>
-                                </a></li>
-                        </ul>
-                    </fieldset>
-                </form>
-            </section>
+            <?php include("./html_inc/provision_box.inc");?>
             <?php include("./html_inc/vip_ad.inc"); ?>
-            <?php include("./html_inc/basic_ad.inc"); ?>
+            <section class="basic_ad">
+                <h2>일반 구인광고</h2>
+                <div class="ad">
+                    <?php while($array = mysqli_fetch_array($result)){?>
+                        <?php
+                        $nDate = date("Y-m-d");
+                        $valDate = $array['ai_endDate'];
+                        $leftDate = intval((strtotime($nDate)-strtotime($valDate)) / 86400) + 1; 
+                        $i = $i + 1;
+                        $page = ceil($i / $list_num);
+                    ?>
+                    <a href="/web_project/ad/list.php?page=<?php echo $page;?>&n_idx=<?php echo $array['idx'];?>#bl<?php echo $array['idx'];?>">
+                        <div class="ad<?php echo $array['idx'];?>" id="ad_box">
+                            <img class="ad_img" src="./data/<?php echo $array['c_logo_name'];?>" alt="">
+                            <div class="ad<?php echo $array['idx'];?>_bg" id="ad_text">
+                                <span><?php echo $array['c_name'];?></span>
+                                <span class="dd"><?php echo $array['ai_title'];?></span>
+                                <span class="day">D-<?php echo $leftDate;?></span>
+                            </div>
+                        </div>
+                    </a>
+                    <input type="hidden" value="<?php echo $i;?>">
+                    <?php };?>
+                </div>
+                <p class="ad_more">펼치기></p>
+            </section>
         </main>
         <?php include("./html_inc/footer.inc"); ?>
     </div>
 </body>
-
 </html>

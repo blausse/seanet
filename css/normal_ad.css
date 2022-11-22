@@ -3,67 +3,82 @@
     height: 700px;
     margin: 0 auto 50px;
     position: relative;
-    overflow:hidden;
+    overflow: hidden;
     line-height: 18px;
     font-family: "roboto", "noto sans kr", "applesdgothicneo";
-    display:flex;
+    display: flex;
     flex-direction: row;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
-.basic_ad{position: relative;width: 1000px;margin:auto}
+
+.basic_ad {
+    position: relative;
+    width: 1000px;
+    margin: auto
+}
+
 .basic_ad h2 {
     font-size: 20px;
     font-weight: bold;
     width: 1000px;
-    margin:auto;
+    margin: auto;
     margin-bottom: 10px;
     line-height: 24px;
 }
+
 /* 일반 광고 박스 */
-.ad dl {
+#ad_box {
     width: 235px;
-    height: 120px;
+    height: 121px;
     box-sizing: border-box;
-    border-top: 4px solid #4da4fc;
+    border-top: 5px solid #4da4fc;
     border-left: 1px solid #4da4fc;
     border-right: 1px solid #4da4fc;
     border-bottom: 1px solid #4da4fc;
+    border-radius: 5px 5px 0px 0px;
     position: relative;
-    float: left;
-    margin-bottom:20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
 }
+
 /* 일반 광고 서브 박스 */
-.ad div {
+#ad_text {
     width: 152px;
     height: 115px;
-    border-left:1px solid #cdf;
+    border-left: 1px solid #cdf;
     box-sizing: border-box;
-    float: right;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-/* 일반 광고 스크립트 */
-.ad div dt,
-.ad div dd {
-    margin-left: 10px;
-}
+
 /* 회사이름 */
-.ad div dt {
+#ad_text>span:first-child {
     font-size: 10px;
     color: #949494;
-    margin-top: 10px;
-    margin-bottom: 7px;
 }
+
+.ad_img {
+    width: 80px;
+    height: 115px;
+}
+
 /* 일반 광고 스크립트 */
-.ad div dd {
+#ad_text .dd {
     font-size: 14px;
 }
+
 /* 디데이 */
-.ad div dd:last-child {
-    position: absolute;
-    bottom: 10px;
+#ad_text .day {
     color: #0080ff;
     font-size: 10px;
 }
+
 /* 펼치기 감추기 */
 .ad_more {
     position: absolute;

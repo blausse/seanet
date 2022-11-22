@@ -6,25 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEANET</title>
-    <link rel="stylesheet" href="css/reset.css" type="text/css">
-    <link rel="stylesheet" href="css/ir.css" type="text/css">
-    <link rel="stylesheet" href="css/footer.css" type="text/css">
-    <link href="css/nice-select.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/vip_ad.css" type="text/css">
-    <link rel="stylesheet" href="css/header.css" type="text/css">
-    <link rel="stylesheet" href="css/mainbanner.css" type="text/css">
-    <link rel="stylesheet" href="css/voice.css" type="text/css">
-    <link rel="stylesheet" href="css/provision.css" type="text/css">
-    <link rel="stylesheet" href="css/normal_ad.css" type="text/css">
-    <link rel="stylesheet" href="css/rank.css" type="text/css">
-    <link rel="stylesheet" href="css/gnb.css" type="text/css">
-    <link rel="stylesheet" href="css/topmenu.css" type="text/css">
-    <link rel="stylesheet" href="css/header_search.css" type="text/css">
-    <link rel="stylesheet" href="css/popular_rank.css" type="text/css">
-    <link rel="stylesheet" href="css/provision_check.css" type="text/css">
-    <script src="script/jquery.js"></script>
-    <script src="script/jquery.nice-select.js"></script>
-    <script src="script/script.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../css/ir.css" type="text/css">
+    <link rel="stylesheet" href="../css/footer.css" type="text/css">
+    <link href="../css/nice-select.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/vip_ad.css" type="text/css">
+    <link rel="stylesheet" href="../css/header.css" type="text/css">
+    <link rel="stylesheet" href="../css/mainbanner.css" type="text/css">
+    <link rel="stylesheet" href="../css/voice.css" type="text/css">
+    <link rel="stylesheet" href="../css/provision.css" type="text/css">
+    <link rel="stylesheet" href="../css/normal_ad.css" type="text/css">
+    <link rel="stylesheet" href="../css/rank.css" type="text/css">
+    <link rel="stylesheet" href="../css/gnb.css" type="text/css">
+    <link rel="stylesheet" href="../css/topmenu.css" type="text/css">
+    <link rel="stylesheet" href="../css/header_search.css" type="text/css">
+    <link rel="stylesheet" href="../css/popular_rank.css" type="text/css">
+    <link rel="stylesheet" href="../css/provision_check.css" type="text/css">
+    <script src="../script/jquery.js"></script>
+    <script src="../script/jquery.nice-select.js"></script>
+    <script src="../script/script.js" type="text/javascript"></script>
     <script></script>
 </head>
 
@@ -35,8 +35,8 @@
                 <legend>배송조회</legend>
                 <div class="form-group hide">
                     <label for="t_key">API key</label>
-                    <input type="text" class="form-control" id="t_key" name="t_key" placeholder="제공받은 APIKEY"
-                        value="Ds6am1CZGQMNMpgikmNj9Q">
+                    <input type="hidden" class="form-control" id="t_key" name="t_key" placeholder="제공받은 APIKEY"
+                        value="8rC8VcHEmE7WoiBR5v9IAA">
                 </div>
                 <div class="form-group">
                     <label for="t_code" class="hide">택배사 코드</label>

@@ -37,8 +37,7 @@ body {
     /* 45px은 헤더 높이,95vh는 height 95% */
     height: calc(95vh - 200px);
     border-left: 1px solid #e0e0e0;
-    /* overflow-y: scroll;
-    overflow-x: hidden; */
+    overflow: scroll;
     box-sizing: border-box;
 }
 

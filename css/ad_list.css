@@ -213,6 +213,7 @@ body {
 
 .detail_content {
     padding: 20px 0 20px 30px;
+    margin-bottom: 50px;
     font-size: 16px;
     line-height: 1.5;
 }

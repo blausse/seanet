@@ -12,14 +12,14 @@ $timeResult = isset($_GET['n_idx'])? mysqli_query($dbcon,$timeSql) : '';
 $total = mysqli_num_rows($result);
 $array = mysqli_fetch_array($result);
 $timeArray = isset($_GET['n_idx'])? mysqli_fetch_array($timeResult) : '';
-$list_num = 20;
+$list_num = 3;
 $page_num = 5;
 $page = isset($_GET['page'])? $_GET['page'] : 1;
 $total_page = ceil($total / $list_num);
 $total_block = ceil($total_page / $page_num);
 $now_block = ceil($page / $page_num);
 $s_pageNum = ($now_block - 1) * $page_num + 1;
-
+$pos = isset($_GET['pos'])? $_GET['pos'] : 1;
 
 if($s_pageNum <= 0){
 $s_pageNum = 1;
@@ -54,7 +54,9 @@ if($e_pageNum > $total_page){
 <script src="../script/top_menu.js" type="text/javascript"></script>
 <script>
     function notice_detail(no_idx){
-        location.href = "list.php?page="+<?php echo $page;?>+"&n_idx="+no_idx+"#bl"+no_idx;
+        var ContainerElement = document.getElementById("ContentContainer");
+        let y = ContainerElement.scrollTop;
+        location.href = "list.php?page="+<?php echo $page;?>+"&n_idx="+no_idx+"&pos="+y;
     };
     function notice_del(n_idx) {
         const admin_ck = confirm("정말 삭제하시겠습니까?");
@@ -82,6 +84,8 @@ if($e_pageNum > $total_page){
 
         diffDay();
         setInterval(diffDay, 1000);
+
+        $('.notice_list').scrollTop(<?php echo $pos;?>);
     })
     </script>
 </head>
@@ -90,24 +94,25 @@ if($e_pageNum > $total_page){
     <div class="notice">
         <div class="notice_left">
     <p class="total">전체 <?php echo $total;?>개</p>
-        <div class="notice_list">
+        <div class="notice_list" id="ContentContainer">
             <?php 
         $start = ($page - 1)*$list_num;
         $sql = "select * from ad_company join ad_info on ad_company.idx = ad_info.idx order by ad_company.idx desc limit $start, $list_num;";
         $result = mysqli_query($dbcon,$sql);
+
         while($array = mysqli_fetch_array($result)){?>
-        <?php
-            $nDate = date("Y-m-d");
-            $valDate = $array['ai_endDate'];
-            $leftDate = intval((strtotime($nDate)-strtotime($valDate)) / 86400) + 1; 
-        ?>
+            <?php
+                $nDate = date("Y-m-d");
+                $valDate = $array['ai_endDate'];
+                $leftDate = intval((strtotime($nDate)-strtotime($valDate)) / 86400) + 1; 
+            ?>
             <div id="bl<?php echo $array['idx'];?>" class="notice_card <?php if($array['idx'] == $n_idx){ echo "active_notice";}?>" onclick="notice_detail(<?php echo $array['idx'];?>)">
             <img src="../data/<?php echo $array['c_logo_name'];?>" alt="">
-                        <dl id="list">
-                            <dt class="subtitle"><?php echo $array['c_name'];?></dt>
-                            <dd class="ad_desc <?php if($array['idx'] == $n_idx){ echo "active_title";}?>"><?php echo $array['ai_title'];?></dd>
-                            <dd class="day">D-<?php echo $leftDate;?></dd>
-                        </dl>
+                <dl id="list">
+                    <dt class="subtitle"><?php echo $array['c_name'];?></dt>
+                    <dd class="ad_desc <?php if($array['idx'] == $n_idx){ echo "active_title";}?>"><?php echo $array['ai_title'];?></dd>
+                    <dd class="day">D-<?php echo $leftDate;?></dd>
+                </dl>
             </div>
             <?php };?>
             <p class="pager">

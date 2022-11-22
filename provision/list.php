@@ -13,6 +13,7 @@ $total_block = ceil($total_page / $page_num);
 $now_block = ceil($page / $page_num);
 $s_pageNum = ($now_block - 1) * $page_num + 1;
 $p_idx = isset($_GET['p_idx'])? $_GET['p_idx'] : '';
+$pos = isset($_GET['pos'])? $_GET['pos'] : '';
 
 if($s_pageNum <= 0){
 $s_pageNum = 1;
@@ -47,15 +48,16 @@ if($e_pageNum > $total_page){
 <script src="../script/script.js" type="text/javascript"></script>
 <script>
     function notice_detail(no_idx){
-        location.href = "list.php?page="+<?php echo $page;?>+"&p_idx="+no_idx+"#bl"+no_idx;
-    
-};
-function notice_del(p_idx) {
-    const admin_ck = confirm("정말 삭제하시겠습니까?");
-    if (admin_ck) {
-        location.href = "delete.php?p_idx="+p_idx+";";
+        let ContainerElement = document.getElementById("ContentContainer");
+        let y = ContainerElement.scrollTop;
+        location.href = "list.php?page="+<?php echo $page;?>+"&p_idx="+no_idx+"&pos="+y;
     };
-};
+    function notice_del(p_idx) {
+        const admin_ck = confirm("정말 삭제하시겠습니까?");
+        if (admin_ck) {
+            location.href = "delete.php?p_idx="+p_idx+";";
+        };
+    };
     function locationChange(){
         $cate = $('.location_box option:selected').val();
                 if ($cate == "korea") {
@@ -90,7 +92,10 @@ function notice_del(p_idx) {
 
                 $current = $('.current').eq(1);
                 $current.text('세부 지역');
-            };
+    };
+    $(function(){
+        $('.notice_list').scrollTop(<?php echo $pos;?>);
+    });
 </script>
 
 <style>
@@ -174,7 +179,7 @@ function notice_del(p_idx) {
                                             <button type="submit" class="provision_search_btn">검색</button>
                                         </fieldset>
                                     </form>
-        <div class="notice_list">
+        <div class="notice_list" id="ContentContainer">
             <?php 
         $start = ($page - 1)*$list_num;
         $sql = "select * from provision_list order by p_idx desc limit $start, $list_num;";

@@ -48,15 +48,17 @@
 /* 광고 내부 */
 .vip_ad ul li {
     width: 235px;
-    height: 305px;
+    height: 306px;
     background-position: 1px 1px;
-    border-top: 4px solid #4da4fc;
+    border-top: 5px solid #4da4fc;
     border-left: 1px solid #4da4fc;
     border-right: 1px solid #4da4fc;
     border-bottom: 1px solid #4da4fc;
     box-sizing: border-box;
     float: left;
     margin: 0 0 20px 0;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* 광고 내부 스크립트 상자 */
