@@ -1,9 +1,18 @@
 <?php
+// error_reporting(E_ALL);
+
+// ini_set('display_errors', '1');
 include "inc/session.php";
 include "inc/dbcon.php";
-$sql = "select * from ad_company join ad_info on ad_company.idx = ad_info.idx order by ad_company.idx desc;";
+$sql = "select * from ad_company join ad_info on ad_company.idx = ad_info.idx and ad_company.vip=1 order by ad_company.idx desc;";
+$sqli = "select * from ad_company join ad_info on ad_company.idx = ad_info.idx order by ad_company.idx desc;";
+$sqlc = "select * from ad_company join ad_info on ad_company.idx = ad_info.idx order by ad_info.cnt desc limit 10;";
+// $sqlp = "select c_name from ad_company join ad_info on ad_company.idx = ad_info.idx order by ad_info.cnt desc limit 10;";
 $result = mysqli_query($dbcon,$sql);
-$list_num = 3;
+$iresult = mysqli_query($dbcon,$sqli);
+$cresult = mysqli_query($dbcon,$sqlc);
+// $presult = mysqli_query($dbcon,$sqlp);
+$list_num = 20;
 ?>
 
 <!DOCTYPE html>
@@ -67,12 +76,20 @@ $list_num = 3;
                 $current = $('.current').eq(1);
                 $current.text('세부 지역');
             };
-
-
-</script>
+$(function(){
+    var slide = $('.slide');
+    var firstCopy = slide[0].cloneNode(true);
+    var secondCopy = slide[1].cloneNode(true);
+    var lastCopy = slide[9].cloneNode(true);
+    var beforeLast= slide[8].cloneNode(true);
+    slide[9].after(secondCopy);
+    slide[9].after(firstCopy);
+    slide[0].before(beforeLast); 
+    slide[0].before(lastCopy); 
+});
+    </script>
 
 </head>
-
 <body>
     <div class="wrap">
         <?php include("./html_inc/header.inc"); ?>
@@ -88,123 +105,32 @@ $list_num = 3;
             <div class="main_banner_bg">
                 <div class="" id="slideShow">
                     <ul class="slides">
-                        <li class="slide">
-                            <img src="images/hlngmain.png" alt="" class="main1" id="main1">
-                            <div class="main_txt">
-                                <p class="txt_title">현대LNG</p>
-                                <p class="txt_desc">현대LNG해운 경력직 해기사 상시모집(선종 변경 가능)</p>
-                            </div>
-                        </li>
-                        <li class="slide">
-                            <img src="images/smmain.png" alt="" class="main1" id="main1">
-                            <div class="main_txt">
-                                <p class="txt_title">SM Group 해운부문</p>
-                                <p class="txt_desc">[SM그룹 해운부문] BULK선 해상직원 채용 !!급여인상완료!!</p>
-                            </div>
-                        </li>
-                        <li class="slide">
-                            <img src="images/hmm_main.png" alt="" class="main1" id="main1">
-                            <div class="main_txt">
-                                <p class="txt_title">HMM</p>
-                                <p class="txt_desc">해상직원(PCTC/BULK/CNTR/VLCC 선대 경력) 및 육상직원을 모집합니다.</p>
-                            </div>
-                        </li>
-                        <li class="slide">
-                            <img src="images/skmain.png" alt="" class="main1" id="main1">
-                            <div class="main_txt">
-                                <p class="txt_title">SK shipping</p>
-                                <p class="txt_desc">[SK해운] LNGC 프로젝트 신조감독 채용</p>
-                            </div>
-                        </li>
-                        <li class="slide">
-                            <img src="images/hglovis.png" alt="" class="main1" id="main1">
-                            <div class="main_txt">
-                                <p class="txt_title">현대글로비스</p>
-                                <p class="txt_desc">2022년 현대 글로비스 유통/해운부문 경력직 채용</p>
-                            </div>
-                        </li>
-                        <li class="slide">
-                            <img src="images/sinokor.png" alt="" class="main1" id="main1">
-                            <div class="main_txt">
-                                <p class="txt_title">장금상선</p>
-                                <p class="txt_desc">[장금상선, 흥아라인] 서울 본사 운항팀 채용</p>
-                            </div>
-                        </li>
-                        <li class="slide">
-                            <img src="images/wil.main.png" alt="" class="main1" id="main1">
-                            <div class="main_txt">
-                                <p class="txt_title">윌헴슨쉽매니지먼트코리아(주)</p>
-                                <p class="txt_desc">월급 10%인상 해상직 모집</p>
-                            </div>
-                        </li>
-                        <li class="slide">
-                            <img src="images/kmtcmain.png" alt="" class="main1" id="main1">
-                            <div class="main_txt">
-                                <p class="txt_title">고려해운</p>
-                                <p class="txt_desc">(주)고려해운 정규직 해상직원 채용 공고</p>
-                            </div>
-                        </li>
-                        <li class="slide">
-                            <img src="images/panoceanmain.png" alt="" class="main1" id="main1">
-                            <div class="main_txt">
-                                <p class="txt_title">팬오션</p>
-                                <p class="txt_desc">(팬오션) 선장, 기관장, 1항기사, 2항기사, 부원</p>
-                            </div>
-                        </li>
-                        <li class="slide">
-                            <img src="images/hlinemain.png" alt="" class="main1" id="main1">
-                            <div class="main_txt">
-                                <p class="txt_title">에이치라인</p>
-                                <p class="txt_desc">에이치라인해운(주) PCTC선 공무감독 모집</p>
-                            </div>
-                        </li>
-                        <li class="slide">
-                            <img src="images/hlngmain.png" alt="" class="main1" id="main1">
-                            <div class="main_txt">
-                                <p class="txt_title">현대LNG</p>
-                                <p class="txt_desc">현대LNG해운 경력직 해기사 상시모집(선종 변경 가능)</p>
-                            </div>
-                        </li>
-                        <li class="slide">
-                            <img src="images/smmain.png" alt="" class="main1" id="main1">
-                            <div class="main_txt">
-                                <p class="txt_title">SM Group 해운부문</p>
-                                <p class="txt_desc">[SM그룹 해운부문] BULK선 해상직원 채용 !!급여인상완료!!</p>
-                            </div>
-                        </li>
-                        <li class="slide">
-                            <img src="images/hmm_main.png" alt="" class="main1" id="main1">
-                            <div class="main_txt">
-                                <p class="txt_title">HMM</p>
-                                <p class="txt_desc">해상직원(PCTC/BULK/CNTR/VLCC 선대 경력) 및 육상직원을 모집합니다.</p>
-                            </div>
-                        </li>
-                        <li class="slide">
-                            <img src="images/skmain.png" alt="" class="main1" id="main1">
-                            <div class="main_txt">
-                                <p class="txt_title">SK shipping</p>
-                                <p class="txt_desc">[SK해운] LNGC 프로젝트 신조감독 채용</p>
-                            </div>
-                        </li>
+                        <?php while($carray = mysqli_fetch_array($cresult)){?>
+                            <a href="/web_project/ad/list.php?n_idx=<?php echo $carray['idx'];?>">
+                                <li class="slide">
+                                    <img src="./data/<?php echo $carray['c_main_logo'];?>" alt="" class="main1" id="main1">
+                                    <div class="main_txt">
+                                        <p class="txt_title"><?php echo $carray['c_name'];?></p>
+                                        <p class="txt_desc"><?php echo $carray['ai_title'];?></p>
+                                    </div>
+                                </li>
+                            </a>
+                        <?php }?>
                     </ul>
                     <div class="controller">
                         <svg class="prev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                             <path
                                 d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 278.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
                         </svg>
                         <svg class="pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                             <path
                                 d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM224 192V320c0 17.7-14.3 32-32 32s-32-14.3-32-32V192c0-17.7 14.3-32 32-32s32 14.3 32 32zm128 0V320c0 17.7-14.3 32-32 32s-32-14.3-32-32V192c0-17.7 14.3-32 32-32s32 14.3 32 32z" />
                         </svg>
                         <svg class="play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                             <path
                                 d="M512 256c0 141.4-114.6 256-256 256S0 397.4 0 256S114.6 0 256 0S512 114.6 512 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9V344c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z" />
                         </svg>
                         <svg class="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                            <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                             <path
                                 d="M342.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L274.7 256 105.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
                         </svg>
@@ -294,29 +220,54 @@ $list_num = 3;
                 </form>
             </section>
             <?php include("./html_inc/provision_box.inc");?>
-            <?php include("./html_inc/vip_ad.inc"); ?>
+            <h2 class="vip_title">VIP 구인광고</h2>
+            <div class="box_vip">
+<div class="vip_ad">
+<?php while($array = mysqli_fetch_array($result)){?>
+        <?php
+            $nDate = date("Y-m-d");
+            $valDate = $array['ai_endDate'];
+            $leftDate = intval((strtotime($nDate)-strtotime($valDate)) / 86400) + 1; 
+            // $i = $i + 1;
+            // $page = ceil($i / $list_num);
+        ?>
+        <a href="/web_project/ad/list.php?n_idx=<?php echo $array['idx'];?>">
+            <div class="vip_adbox">
+                <img class="vip_img" src="./data/<?php echo $array['c_vip_logo'];?>" alt="">
+                    <dl class="ad_txt">
+                        <dt><?php echo $array['c_name'];?></dt>
+                        <dd class="ad1_desc"><?php echo $array['ai_title'];?></dd>
+                        <dd class="day1">D<?php echo $leftDate;?></dd>
+                    </dl>
+            </div>
+        </a>
+        <!-- <input type="hidden" value="<?php echo $i;?>"> -->
+        <?php };?>
+</div>
+<p class="vip_more">펼치기></p>
+</div>
             <section class="basic_ad">
                 <h2>일반 구인광고</h2>
                 <div class="ad">
-                    <?php while($array = mysqli_fetch_array($result)){?>
+                    <?php while($iarray = mysqli_fetch_array($iresult)){?>
                         <?php
                         $nDate = date("Y-m-d");
-                        $valDate = $array['ai_endDate'];
-                        $leftDate = intval((strtotime($nDate)-strtotime($valDate)) / 86400) + 1; 
-                        $i = $i + 1;
-                        $page = ceil($i / $list_num);
+                        $valDate = $iarray['ai_endDate'];
+                        $leftDate = intval((strtotime($nDate)-strtotime($valDate)) / 86400) + 1;
+                        $a = $a + 1;
+                        $page = ceil($a / $list_num);
                     ?>
-                    <a href="/web_project/ad/list.php?page=<?php echo $page;?>&n_idx=<?php echo $array['idx'];?>#bl<?php echo $array['idx'];?>">
-                        <div class="ad<?php echo $array['idx'];?>" id="ad_box">
-                            <img class="ad_img" src="./data/<?php echo $array['c_logo_name'];?>" alt="">
-                            <div class="ad<?php echo $array['idx'];?>_bg" id="ad_text">
-                                <span><?php echo $array['c_name'];?></span>
-                                <span class="dd"><?php echo $array['ai_title'];?></span>
-                                <span class="day">D-<?php echo $leftDate;?></span>
+                    <a href="/web_project/ad/list.php?page=<?php echo $page;?>&n_idx=<?php echo $iarray['idx'];?>#bl<?php echo $iarray['idx'];?>">
+                        <div class="ad<?php echo $iarray['idx'];?>" id="ad_box">
+                            <img class="ad_img" src="./data/<?php echo $iarray['c_logo_name'];?>" alt="">
+                            <div class="ad<?php echo $iarray['idx'];?>_bg" id="ad_text">
+                                <span><?php echo $iarray['c_name'];?></span>
+                                <span class="dd"><?php echo $iarray['ai_title'];?></span>
+                                <span class="day">D<?php echo $leftDate;?></span>
                             </div>
                         </div>
                     </a>
-                    <input type="hidden" value="<?php echo $i;?>">
+                    <input type="hidden" value="<?php echo $a;?>">
                     <?php };?>
                 </div>
                 <p class="ad_more">펼치기></p>

@@ -2,8 +2,7 @@ $(document).ready(function () {
     /**실시간 인기 순위 슬라이드 */
     //첫번째 li를 끝으로 복사
 
-    var list1 = $('.list1').clone()
-    var list10 = $('list10')
+    var list1 = $('.popular_list li').eq(0).clone();
     $(".popular_list").append(list1);
 
     var a = -1;

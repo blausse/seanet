@@ -17,6 +17,7 @@ $c_email_dmn = $_POST['c_email_dmn'];
 $c_email = $c_email_id."@".$c_email_dmn;
 $c_addr = $_POST['c_addr'];
 $c_info = $_POST['c_info'];
+$vip = $_POST['vip'];
 
 $work = $_POST['ai_work'];
 $ai_work = join(',',$work);
@@ -49,18 +50,26 @@ $ai_eyear = SUBSTR($ai_end,6,4);
 $ai_endDate = $ai_eyear."-".$ai_emonth."-".$ai_edate;
 
 
-if(!$_FILES["file"]){
+
     $tmp_name = $_FILES["file"]["tmp_name"];
     $name = $_FILES["file"]["name"];
     $up = move_uploaded_file($tmp_name, "../data/$name");
-};
+    $vip_tmp_name = $_FILES["vip_file"]["tmp_name"];
+    $vip_name = $_FILES["vip_file"]["name"];
+    $vip_up = move_uploaded_file($vip_tmp_name, "../data/$vip_name");
+    $main_tmp_name = $_FILES["main_file"]["tmp_name"];
+    $main_name = $_FILES["main_file"]["name"];
+    $main_up = move_uploaded_file($main_tmp_name, "../data/$main_name");
+
 
 $c_logo_name = $_FILES["file"]["name"];
 $c_logo_type = $_FILES["file"]["type"];
 $c_logo_date = $_FILES["file"]["size"];
+$c_vip_logo = $_FILES["vip_file"]["name"];
+$c_main_logo = $_FILES["main_file"]["name"];
 
 
-$sql = "update ad_company set c_name='$c_name',c_web='$c_web',c_num='$c_num',c_fax='$c_fax',c_pic='$c_pic',c_email='$c_email',c_addr='$c_addr',c_info='$c_info',c_logo_type='$c_logo_type',c_logo_date='$c_logo_date',c_logo_name='$c_logo_name' where ad_company.idx=$n_idx;";
+$sql = "update ad_company set c_name='$c_name',c_web='$c_web',c_num='$c_num',c_fax='$c_fax',c_pic='$c_pic',c_email='$c_email',c_addr='$c_addr',c_info='$c_info',c_logo_type='$c_logo_type',c_logo_date='$c_logo_date',c_logo_name='$c_logo_name',c_vip_logo='$c_vip_logo',c_main_logo='$c_main_logo',vip='$vip' where ad_company.idx=$n_idx;";
 
 $aiSql = "update ad_info set ai_work='$ai_work',ai_location='$ai_location',ai_salary='$ai_salary',ai_school='$ai_school',ai_worktype='$ai_worktype',ai_ctype='$ai_ctype',ai_career='$ai_career',ai_date='$ai_date',ai_essential='$ai_essential',ai_preferential='$ai_preferential',ai_gender='$ai_gender',ai_title='$ai_title',ai_detail='$ai_detail',ai_startDate='$ai_startDate',ai_endDate='$ai_endDate' where ad_info.idx=$n_idx;";
 

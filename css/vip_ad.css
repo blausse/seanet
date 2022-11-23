@@ -1,11 +1,19 @@
 /* 전체 ul */
-.vip_box1 {
-    width: 100%;
-    max-width: 1040px;
+.vip_ad {
+    width: 1000px;
+    height: 965px;
     margin: 0 auto 70px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.box_vip {
+    width: 1000px;
     position: relative;
-    height: 960px;
-    overflow: hidden
+    margin: auto;
 }
 
 /* h2 */
@@ -20,14 +28,6 @@
     margin: auto;
 }
 
-/* poa용 div */
-.vip_ad {
-    position: relative;
-    margin: auto;
-    width: 1000px;
-    height: auto;
-}
-
 /* 펼치기 감추기 */
 .vip_more {
     position: absolute;
@@ -37,70 +37,66 @@
     cursor: pointer;
 }
 
-/* 광고 레이아웃 */
-.vip_ad ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 
-/* 광고 내부 */
-.vip_ad ul li {
-    width: 235px;
+.vip_adbox {
+    width: 233px;
     height: 306px;
-    background-position: 1px 1px;
     border-top: 5px solid #4da4fc;
     border-left: 1px solid #4da4fc;
     border-right: 1px solid #4da4fc;
     border-bottom: 1px solid #4da4fc;
     box-sizing: border-box;
-    float: left;
-    margin: 0 0 20px 0;
+    margin-bottom: 20px;
     border-radius: 5px 5px 0 0;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.vip_img {
+    width: 100%;
+    height: 175px;
 }
 
 /* 광고 내부 스크립트 상자 */
-.vip_ad div {
-    width: 232px;
+.ad_txt {
+    width: 100%;
     height: 123px;
-    margin: 176px auto 0;
     background: white;
     border-top: 1px solid #caddff;
-    padding: 5px 20px 0 20px;
+    padding: 10px;
     box-sizing: border-box;
-    position: relative;
-}
-
-/* 광고 내부 스크립트 서브 상자 */
-.vip_ad dl {
-    width: 194px;
-    height: 124px;
-    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* 광고 내부 회사 이름 */
 .vip_ad dl>dt {
-    font-size: 12px;
+    font-size: 14px;
     color: #777777;
-    margin-bottom: 12px;
 }
 
 /* 광고 내부 스크립트 */
 .vip_ad dl>dd {
     font-size: 16px;
-    line-height: 20px;
-    width: 195px;
+    line-height: 1.5;
     font-family: "Noto sans";
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    /* text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap; */
 }
 
 /* 디데이 */
 .vip_ad dl dd:last-child {
-    position: absolute;
-    right: 20px;
-    bottom: 10px;
     color: #0080ff;
-    font-size: 15px;
-    text-align: right;
+    font-size: 14px;
 }
+

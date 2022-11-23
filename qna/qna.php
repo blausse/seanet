@@ -65,7 +65,7 @@ include "inc/session.php";
                         </a>
                     </li>
                 </ul>
-                <p class="notice_more">공지 전체보기 ></p>
+                <p class="notice_more"><a href="/web_project/notice/list.php">공지 전체보기 ></a></p>
             </div><hr class="a">
             <div class="main_qna">
                 <h2>자주 찾는 도움말</h2>

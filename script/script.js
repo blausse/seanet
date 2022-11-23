@@ -5,13 +5,13 @@ $(document).ready(function () {
 $(document).ready(function () {
     //vip_more 클릭 시, 구인광고 펼치기 / 접기
     $('.vip_more').click(function () {
-        var height = $('#vip_box').height()
-        if (height == 960) {
-            $('#vip_box').height("auto")
+        var height = $('.vip_ad').height()
+        if (height == 965) {
+            $('.vip_ad').height("auto")
             $(this).html("감추기>")
         }
         else {
-            $('#vip_box').height("960")
+            $('.vip_ad').height("965")
             $(this).html("펼치기>")
         }
     })

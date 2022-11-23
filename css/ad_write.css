@@ -30,7 +30,8 @@ legend {
 .reg_wrap>label {
     line-height: 40px;
     font-size: 14px;
-    font-weight: 700
+    font-weight: 700;
+    width: 100%;
 }
 
 .reg_wrap input[type=text] {

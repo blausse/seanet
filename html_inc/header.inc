@@ -13,16 +13,14 @@
                     <h2 class="popular">실시간 인기</h2>
                     <div class="list_wrap">
                         <ol class="popular_list">
-                            <li class="list1"><a href="#">1. <span>SK shipping</span></a></li>
-                            <li><a href="#">2. <span>HMM</span></a></li>
-                            <li><a href="#">3. <span>현대글로비스</span></a></li>
-                            <li><a href="#">4. <span>장금상선</span></a></li>
-                            <li><a href="#">5. <span>윌헴슨쉽매니지(주)</span></a></li>
-                            <li><a href="#">6. <span>고려해운</span></a></li>
-                            <li><a href="#">7. <span>팬오션</span></a></li>
-                            <li><a href="#">8. <span>에이치라인</span></a></li>
-                            <li><a href="#">9. <span>현대LNG</span></a></li>
-                            <li class="list10"><a href="#">10. <span>SM Group 해운부문</span></a></li>
+                        <?php 
+                        $sqlp = "select c_name from ad_company join ad_info on ad_company.idx = ad_info.idx order by ad_info.cnt desc limit 10;";
+                        $presult = mysqli_query($dbcon,$sqlp);
+                        $c = 1;
+                        ?>
+                        <?php while($parray = mysqli_fetch_array($presult)){?>
+                            <li class="list1"><a href="#"><?php echo $c;?>. <span><?php echo $parray['c_name'];?></span></a></li>
+                            <?php $c = $c + 1;};?>
                         </ol>
                     </div>
                 </div>

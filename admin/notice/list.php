@@ -13,6 +13,8 @@ $total_block = ceil($total_page / $page_num);
 $now_block = ceil($page / $page_num);
 $s_pageNum = ($now_block - 1) * $page_num + 1;
 $n_idx = isset($_GET['n_idx'])? $_GET['n_idx'] : '';
+$pos = isset($_GET['pos'])? $_GET['pos'] : '';
+
 if($s_pageNum <= 0){
 $s_pageNum = 1;
 };
@@ -46,7 +48,9 @@ if($e_pageNum > $total_page){
 <script src="../script/top_menu.js" type="text/javascript"></script>
 <script>
     function notice_detail(no_idx){
-    location.href = "list.php?page="+<?php echo $page;?>+"&n_idx="+no_idx+"#bl"+no_idx;
+    let ContainerElement = document.getElementById("ContentContainer");
+    let y = ContainerElement.scrollTop;
+    location.href = "list.php?page="+<?php echo $page;?>+"&n_idx="+no_idx+"&pos="+y;
 };
 function notice_del(n_idx) {
     const admin_ck = confirm("정말 삭제하시겠습니까?");
@@ -54,6 +58,9 @@ function notice_del(n_idx) {
         location.href = "delete.php?n_idx="+n_idx+";";
     };
 };
+$(function(){
+  $('.notice_list').scrollTop(<?php echo $pos;?>);
+})
     </script>
     <style>
 .write{border:none;background:#0080ff;color:white;padding: 5px 10px;border-radius:15px;margin-right:10px;}
@@ -66,7 +73,7 @@ function notice_del(n_idx) {
     <div class="notice">
         <div class="notice_left">
     <p class="total">전체 <?php echo $total;?>개</p>
-        <div class="notice_list">
+        <div class="notice_list" id="ContentContainer">
             <?php 
         $start = ($page - 1)*$list_num;
         $sql = "select * from notice order by idx desc limit $start, $list_num;";
@@ -93,21 +100,21 @@ function notice_del(n_idx) {
                 <?php
                     if($page <= 1){
                 ?>
-                    <a href="list.php?page=1&n_idx=<?php echo $n_idx;?>#bl<?php echo $n_idx;?>" class="pager_prev">이전</a>
+                    <a href="list.php?page=1&n_idx=<?php echo $n_idx;?>" class="pager_prev">이전</a>
                 <?php } else{?>
-                    <a href="list.php?page=<?php echo ($page-1);?>&n_idx=<?php echo $n_idx;?>#bl<?php echo $n_idx;?>" class="pager_prev">이전</a>
+                    <a href="list.php?page=<?php echo ($page-1);?>&n_idx=<?php echo $n_idx;?>" class="pager_prev">이전</a>
                 <?php };?>
                 <?php
                     for($print_page = $s_pageNum; $print_page <= $e_pageNum; $print_page++){
                 ?>
-                    <a href="list.php?page=<?php echo $print_page; ?>&n_idx=<?php echo $n_idx;?>#bl<?php echo $n_idx;?>"><button class="<?php if($page == $print_page){?>active_pager<?php }else{;?>pager_btn<?php };?>"><?php echo $print_page; ?></button></a>
+                    <a href="list.php?page=<?php echo $print_page; ?>&n_idx=<?php echo $n_idx;?>"><button class="<?php if($page == $print_page){?>active_pager<?php }else{;?>pager_btn<?php };?>"><?php echo $print_page; ?></button></a>
                 <?php };?>
                 <?php
                     if($page >= $total_page){
                 ?>
-                    <a href="list.php?page=<?php echo $total_page; ?>&n_idx=<?php echo $n_idx;?>#bl<?php echo $n_idx;?>" class="pager_next">다음</a>
+                    <a href="list.php?page=<?php echo $total_page; ?>&n_idx=<?php echo $n_idx;?>" class="pager_next">다음</a>
                 <?php } else{ ?>
-                    <a href="list.php?page=<?php echo ($page+1); ?>&n_idx=<?php echo $n_idx;?>#bl<?php echo $n_idx;?>" class="pager_next">다음</a>
+                    <a href="list.php?page=<?php echo ($page+1); ?>&n_idx=<?php echo $n_idx;?>" class="pager_next">다음</a>
                 <?php };?>
             </p>
         </div>

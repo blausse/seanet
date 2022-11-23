@@ -137,11 +137,27 @@ textarea{width: 100%;resize:none;height: 400px;border:none;font-family:"roboto,n
                         <label for="c_info">사업내용</label><span class="err_text"></span>
                         <span class="text_box"><input type="text" name="c_info" id="c_info" value="<?php echo $array['c_info'];?>"></span>
                         <label for="c_logo_name" class="c_logo">회사로고</label>
+                        <label for="vipcheck">VIP 여부</label>
+                        <span class="text_box"><input type="radio" name="vip" id="yes" value="1">예<input type="radio" name="vip" id="no" value="0">아니오</span>
                         <div class="filebox">
                             <input name="c_logo_name" class="upload-name" value="이미지 크기 : 120 * 80 pixels"
                                 placeholder="이미지 크기 : 120 * 80 pixels">
                             <label class="file_search" for="file">파일찾기</label>
                             <input type="file" id="file" name="file">
+                        </div>
+                        <label for="c_logo_name" class="c_logo">VIP 로고</label>
+                        <div class="filebox">
+                            <input name="c_vip_logo" class="upload-name" value="이미지 크기 : 233 * 175 pixels"
+                                placeholder="이미지 크기 : 233 * 175 pixels">
+                            <label class="file_search" for="vip_file">파일찾기</label>
+                            <input type="file" id="vip_file" name="vip_file">
+                        </div>
+                        <label for="c_main_logo" class="c_logo">메인 배너 로고</label>
+                        <div class="filebox" id="filebox">
+                            <input name="c_main_logo" class="upload-name" value="이미지 크기 : 1200 * 440 pixels"
+                                placeholder="이미지 크기 : 1200 * 440 pixels">
+                            <label class="file_search" for="main_file">파일찾기</label>
+                            <input type="file" id="main_file" name="main_file">
                         </div>
                         <p class="sub_title">구인정보 입력</p>
                         <p class="ai_item_title"><button type="button">직무</button><button type="button">지역</button><button type="button">급여</button><button type="button">학력</button><button type="button">근무형태</button><button type="button">기업형태</button></p>

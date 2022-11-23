@@ -72,6 +72,7 @@ body {
 .ad_desc {
     color: #222;
     font-size: 16px;
+    line-height: 20px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -173,8 +174,12 @@ body {
     font-size: 18px;
 }
 
+#list .day {
+    font-size: 12px;
+}
+
 .day {
-    color: #a7a7a7;
+    color: #999;
 }
 
 #detail_top {
@@ -321,4 +326,40 @@ body {
     padding-right: 20px;
     width: 100%;
     color: #222
+}
+
+.view_icon {
+    width: auto;
+    height: 15px;
+    margin-right: 5px;
+    fill: #999;
+    position: relative;
+    top: 1px;
+}
+
+#list .view_icon {
+    height: 13px;
+    position: relative;
+    top: 2px;
+}
+
+.detail_top_sub {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.detail_top_list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cnt {
+    color: #999;
+    margin-right:30px;
+}
+
+.list_cnt {
+    color: #999;
+    font-size: 12px;
 }

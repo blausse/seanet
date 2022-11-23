@@ -103,21 +103,21 @@ $(function(){
                 <?php
                     if($page <= 1){
                 ?>
-                    <a href="list.php?page=1&n_idx=<?php echo $n_idx;?>#bl<?php echo $n_idx;?>" class="pager_prev">이전</a>
+                    <a href="list.php?page=1&n_idx=<?php echo $n_idx;?>" class="pager_prev">이전</a>
                 <?php } else{?>
-                    <a href="list.php?page=<?php echo ($page-1);?>&n_idx=<?php echo $n_idx;?>#bl<?php echo $n_idx;?>" class="pager_prev">이전</a>
+                    <a href="list.php?page=<?php echo ($page-1);?>&n_idx=<?php echo $n_idx;?>" class="pager_prev">이전</a>
                 <?php };?>
                 <?php
                     for($print_page = $s_pageNum; $print_page <= $e_pageNum; $print_page++){
                 ?>
-                    <a href="list.php?page=<?php echo $print_page; ?>&n_idx=<?php echo $n_idx;?>#bl<?php echo $n_idx;?>"><button class="<?php if($page == $print_page){?>active_pager<?php }else{;?>pager_btn<?php };?>"><?php echo $print_page; ?></button></a>
+                    <a href="list.php?page=<?php echo $print_page; ?>&n_idx=<?php echo $n_idx;?>"><button class="<?php if($page == $print_page){?>active_pager<?php }else{;?>pager_btn<?php };?>"><?php echo $print_page; ?></button></a>
                 <?php };?>
                 <?php
                     if($page >= $total_page){
                 ?>
-                    <a href="list.php?page=<?php echo $total_page; ?>&n_idx=<?php echo $n_idx;?>#bl<?php echo $n_idx;?>" class="pager_next">다음</a>
+                    <a href="list.php?page=<?php echo $total_page; ?>&n_idx=<?php echo $n_idx;?>" class="pager_next">다음</a>
                 <?php } else{ ?>
-                    <a href="list.php?page=<?php echo ($page+1); ?>&n_idx=<?php echo $n_idx;?>#bl<?php echo $n_idx;?>" class="pager_next">다음</a>
+                    <a href="list.php?page=<?php echo ($page+1); ?>&n_idx=<?php echo $n_idx;?>" class="pager_next">다음</a>
                 <?php };?>
             </p>
         </div>
